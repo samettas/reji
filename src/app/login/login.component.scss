@@ -1,0 +1,68 @@
+
+
+.background {
+    background-image: url('../../assets/banner.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    h2{
+        font-size: 14px;
+    }
+    .container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    .image-container {
+        flex: 1;
+        padding: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px 50px 0px 50px ;
+  }
+  
+  .login-container {
+    width: 404px;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3{
+        font-size: 14px;
+        padding-top: 32px;
+    }
+  }
+  
+  .login-container input {
+    margin-bottom: 32px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .login-container button {
+    padding: 10px;
+    background-color: #F5C519;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+    }
+
+  }
+  
+  
+  
+ 
