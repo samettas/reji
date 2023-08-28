@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "reji-e0a52": {
+      "hosting": {
+        "reji": [
+          "reji-e0a52"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "reji-e0a52"
+  }
+}
