@@ -1,0 +1,174 @@
+<div class="container-fluid px-0 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col col-xl-12">
+      <div class="card" style="border: none">
+        <div class="row">
+          <div class="col-md-4 col-lg- d-none d-md-block">
+            <auth-sidebar></auth-sidebar>
+          </div>
+          <div class="col-md-4 col-lg-4 d-flex align-items-center mt-0">
+            <div class="card-body p-4 p-lg-5 text-black">
+              <form>
+                <div class="d-flex align-items-center mb-3 pb-1">
+                  <button
+                    class="btn d-md-none"
+                    style="background-color: #323232; color: #d4bc64"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"
+                  >
+                    Menu
+                  </button>
+                </div>
+
+                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                  Profili Duzenle
+                </h5>
+
+                <div class="form-outline mb-3">
+                  <img
+                    src="https://github.com/mdo.png"
+                    alt=""
+                    width="96"
+                    height="96"
+                    class="rounded-circle mb-3"
+                    style="margin-left: 120px"
+                  />
+
+                  <input type="file" class="form-control" id="customFile" />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form2Example17"
+                    >Ad ve soyad</label
+                  >
+                  <input
+                    type="email"
+                    id="form2Example17"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-1">
+                  <label class="form-label" for="form2Example17"
+                    >Email adresi</label
+                  >
+                  <input
+                    type="email"
+                    id="form2Example17"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form2Example27"
+                    >Telefon Numarasi</label
+                  >
+                  <input
+                    type="password"
+                    id="form2Example27"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <div class="pt-1 mb-4">
+                  <button class="btn btn-dark btn-lg btn-block" type="button">
+                    Guncelle
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="offcanvas offcanvas-start"
+  data-bs-scroll="true"
+  tabindex="-1"
+  id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel"
+>
+  <div class="offcanvas-header" style="background-color: #323232">
+    <img
+      src="../../../../../assets/images/2503508.png"
+      class="bi mx-2"
+      width="40"
+      height="32"
+    />
+    <span class="fs-4 fw-bold" style="color: #d4bc64">Reji</span>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body" style="background-color: #323232">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a
+          routerLink="/auth/profile"
+          class="nav-link text-white"
+          routerLinkActive="active"
+          aria-current="page"
+        >
+          Profile
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/auth/updatepassword"
+          class="nav-link text-white"
+          routerLinkActive="active"
+        >
+          Update Password
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/auth/mycomments"
+          class="nav-link text-white"
+          routerLinkActive="active"
+        >
+          My comments
+        </a>
+      </li>
+    </ul>
+
+    <div class="dropdown" style="margin-top: 580px">
+      <a
+        href="#"
+        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+        id="dropdownUser1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="https://github.com/mdo.png"
+          alt=""
+          width="32"
+          height="32"
+          class="rounded-circle me-2"
+        />
+        <strong>Nihat Zaman</strong>
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-dark text-small shadow"
+        aria-labelledby="dropdownUser1"
+      >
+        <li>
+          <a class="dropdown-item" href="/auth/updatepassword"
+            >Update Password</a
+          >
+        </li>
+        <li><a class="dropdown-item" href="/auth/profile">Profile</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="/">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

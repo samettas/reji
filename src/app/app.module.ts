@@ -9,9 +9,19 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { HeaderComponent } from './header/header.component';
+import { UseractionComponent } from './useraction/useraction.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { GlobalService } from './services/global.service';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    UseractionComponent,
+    LoginComponent,
+    RegisterComponent,
+  ],
 
   imports: [
     BrowserModule,
@@ -21,7 +31,7 @@ import { HeaderComponent } from './header/header.component';
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
