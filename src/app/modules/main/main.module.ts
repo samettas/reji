@@ -8,6 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
+import { SidebarPage } from './pages/sidebar/sidebar.page';
+import { ContentPreviewPage } from './pages/content-preview/content-preview.page';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { SharedModule } from '../shared/shared.module';
     HeaderComponent,
     FooterComponent,
     HomePage,
-    MoviesPage
+    MoviesPage,
+    SidebarPage,
+    ContentPreviewPage,
   ],
   imports: [
     CommonModule,

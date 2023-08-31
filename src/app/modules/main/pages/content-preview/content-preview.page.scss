@@ -1,0 +1,89 @@
+.container-fluid {
+    padding: 96px;
+
+    .contextButton {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        background-color: #323232;
+        color: #F5C519;
+        display: inline-block;
+
+        .title {
+            display: flex;
+            padding: 20px;
+            &:hover {
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+            }
+            h2 {
+                font-size: 12px;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .row {
+        .content {
+            padding: 8px;
+            margin-top: 30px;
+            display: flex;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            &:hover {
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 12px;
+            }
+
+            .movieImg {
+                display: flex;
+
+                img {
+                    height: 128px;
+                    width: 128px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            .movieText {
+                padding: 20px;
+
+                .movieStars {
+                    img {
+                        width: 128px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@media (max-width: 540px) {
+    .container-fluid{
+        padding: 0;
+        .contextButton{
+            margin: 24px;
+            margin-bottom: 0;
+        }
+        .row{
+            margin: 24px;
+        }
+    }
+}
