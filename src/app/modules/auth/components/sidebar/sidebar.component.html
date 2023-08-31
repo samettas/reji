@@ -1,0 +1,78 @@
+<div
+  class="d-flex flex-column flex-shrink-0 p-3 text-yellow vh-100"
+  style="width: 280px; background-color: #323232"
+>
+  <a
+    href="/"
+    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+  >
+    <img
+      src="../../../../../assets/images/2503508.png"
+      class="bi me-2"
+      width="40"
+      height="32"
+    />
+    <span class="fs-4 fw-bold">Reji</span>
+  </a>
+  <hr />
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a
+        routerLink="/auth/profile"
+        class="nav-link text-white"
+        routerLinkActive="active"
+        aria-current="page"
+      >
+        Profile
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/auth/updatepassword"
+        class="nav-link text-white"
+        routerLinkActive="active"
+      >
+        Update Password
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="/auth/mycomments"
+        class="nav-link text-white"
+        routerLinkActive="active"
+      >
+        My comments
+      </a>
+    </li>
+  </ul>
+  <hr />
+  <div class="dropdown">
+    <a
+      href="#"
+      class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+      id="dropdownUser1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <img
+        src="https://github.com/mdo.png"
+        alt=""
+        width="32"
+        height="32"
+        class="rounded-circle me-2"
+      />
+      <strong>Nihat Zaman</strong>
+    </a>
+    <ul
+      class="dropdown-menu dropdown-menu-dark text-small shadow"
+      aria-labelledby="dropdownUser1"
+    >
+      <li>
+        <a class="dropdown-item" href="/auth/updatepassword">Update Password</a>
+      </li>
+      <li><a class="dropdown-item" href="/auth/profile">Profile</a></li>
+      <li><hr class="dropdown-divider" /></li>
+      <li><a class="dropdown-item" href="/">Sign out</a></li>
+    </ul>
+  </div>
+</div>

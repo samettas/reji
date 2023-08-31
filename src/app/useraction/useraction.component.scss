@@ -1,0 +1,29 @@
+.container-fluid {
+  height: 100vh;
+  background-image: url("../../assets/images/user-background.jpeg");
+}
+
+.container {
+  background-color: #ffffff;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-radius: 12px;
+}
+.left-section {
+  background-color: #ffffff;
+  flex: 1;
+  height: 85vh;
+}
+
+.right-section {
+  background-color: #ffffff;
+  flex: 1;
+  height: 85vh;
+}
+.content-poster {
+  height: 600px;
+  width: 75%;
+  margin-left: 60px;
+  margin-top: 55px;
+  border-radius: 50px;
+}

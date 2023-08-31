@@ -10,7 +10,19 @@
         style="height: 50px; width: 50px"
       />
     </a>
-    <div class="collapse navbar-collapse">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav navbar-list">
         <li class="nav-item">
           <a class="nav-link" href="#">Filmler</a>
@@ -43,5 +55,22 @@
       </ul>
       <button class="navbar-login">Giriş Yap / Kayıt Ol</button>
     </div>
+  </div>
+  <div
+    class="offcanvas offcanvas-top"
+    tabindex="-1"
+    id="offcanvasTop"
+    aria-labelledby="offcanvasTopLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body"></div>
   </div>
 </nav>
