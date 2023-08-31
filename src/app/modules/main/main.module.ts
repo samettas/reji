@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MoviesPage } from './pages/movies/movies.page';
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    SharedModule
   ]
 })
 export class MainModule { }
