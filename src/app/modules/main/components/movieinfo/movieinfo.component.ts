@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from 'src/app/services/movie.service';
+import { MovieService } from './service/movie.service';
 import { Movie } from '../../models/movie.model';
 
 @Component({
@@ -7,13 +7,20 @@ import { Movie } from '../../models/movie.model';
   templateUrl: './movieinfo.component.html',
   styleUrls: ['./movieinfo.component.scss']
 })
-export class MovieinfoComponent implements OnInit{
+export class MovieinfoComponent {
 
-  movies: Movie[] = [];
-  currentMovieIndex: number = 0;
+  movies: Movie[] = [
+    {
+      "id": 1,
+      "title": "Greenland",
+      "overview": "BİLGİ BİLGİ BİLGİ BİLGİ",
+      "release_date": "2010-07-16"
+  }
+  ];
+  
 
   constructor(private movieService: MovieService) { }
-
+  /*
   ngOnInit(): any {
     this.movieService.getMovies().subscribe(data => {
       this.movies = data;
@@ -21,17 +28,6 @@ export class MovieinfoComponent implements OnInit{
       
     });
   }
-  
-  showNextMovie(): void {
-    if (this.currentMovieIndex < this.movies.length - 1) {
-      this.currentMovieIndex++;
-    }
-  }
-
-  showPreviousMovie(): void {
-    if (this.currentMovieIndex > 0) {
-      this.currentMovieIndex--;
-    }
-  }
+  */
 
 }
