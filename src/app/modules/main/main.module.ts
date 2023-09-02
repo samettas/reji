@@ -8,8 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
-import { SidebarPage } from './pages/sidebar/sidebar.page';
-import { ContentPreviewPage } from './pages/content-preview/content-preview.page';
+import { ContentPreviewComponent } from './components/content-preview/content-preview.component';
 
 
 
@@ -20,8 +19,7 @@ import { ContentPreviewPage } from './pages/content-preview/content-preview.page
     FooterComponent,
     HomePage,
     MoviesPage,
-    SidebarPage,
-    ContentPreviewPage,
+    ContentPreviewComponent,
   ],
   imports: [
     CommonModule,

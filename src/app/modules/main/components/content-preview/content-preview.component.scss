@@ -1,5 +1,5 @@
 .container-fluid {
-    padding: 96px;
+    padding: 64px;
     .contextButton {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
         background-color: #323232;
@@ -42,7 +42,6 @@
             }
 
             .movieImg {
-                display: flex;
                 img {
                     height: 128px;
                     width: 128px;
@@ -52,9 +51,9 @@
             }
 
             .movieText {
-                padding: 20px;
-
+                margin: 10px;
                 .movieStars {
+                    justify-content: center ;
                     img {
                         width: 128px;
                     }
@@ -70,15 +69,45 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-@media (max-width: 540px) {
+@media (max-width: 576px) {
     .container-fluid{
-        padding: 0;
         .contextButton{
-            margin: 24px;
-            margin-bottom: 0;
+            .title{
+                padding: 10px;
+                h2{
+                    margin: 0;
+                }
+            }
+            
         }
         .row{
-            margin: 24px;
+            .content{
+                .movieText{
+                    h1{
+                        font-size: 12px;
+                    }
+                    h2{
+                        font-size: 8px;
+                    }
+                    .movieStars{
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                    img{
+                        width: 64px;
+                    }
+                }
+                }
+                .movieImg{
+                    
+                    img{
+                        height: 72px;
+                        width: 72px;
+                    }
+                }
+                
+            }
         }
     }
 }
