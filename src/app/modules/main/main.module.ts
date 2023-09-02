@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { SharedModule } from '../shared/shared.module';
     HeaderComponent,
     FooterComponent,
     HomePage,
-    MoviesPage
+    MoviesPage,
+    CarouselComponent,
+    ActorinfoComponent
   ],
   imports: [
     CommonModule,
