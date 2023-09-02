@@ -1,0 +1,56 @@
+.container {
+  border-radius: 20px;
+  padding: 10px;
+  font-family:  'inter';
+
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  .card-header {
+    .infobutton {
+      background-color: #323232;
+      color: #f5c519;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+  .card-group {
+    padding: 1px;
+    margin: 1px;
+    
+    .card {
+      
+      border: none;
+      
+      .play-icon {
+        color: #f5c519;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        display: none; 
+        
+      }
+      
+      .card-img {
+        max-width: 100%;
+        height: 300px;
+         
+        transition: transform 0.3s;
+        
+        
+      }
+      .card-img:hover {
+        transform: scale(0.9); /* Resmi küçültün (uzaklaştırın) */
+    }
+      
+      .card-title {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+      }
+    }
+    .card:hover .play-icon {
+        display: block;
+    }
+  }
+}
