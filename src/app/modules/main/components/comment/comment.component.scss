@@ -1,0 +1,59 @@
+.container-divider {
+    border-top: 5px solid #323232; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+.link-muted { 
+    color: #aaa;
+    
+    font-size: 20px;
+    
+} 
+    .link-muted:hover { color: #ff0000; }
+
+.deneme{
+    display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+.com{
+    display: flex;
+    justify-content: end;
+}
+.btn1{
+    display: flex;
+    justify-content: end;
+    
+}
+.btn{
+    background-color: #323232;
+    color: #f5c519;
+    
+}
+
+.form-outline {
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease-out;
+}
+.form-control{
+    border-radius: 8%;
+}
+.form-control:focus + .form-label, .form-control:not(:placeholder-shown) + .form-label {
+    top: -10px;
+    font-size: 12px;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.form-control:focus + .form-label {
+    color: #f5c519;
+}
