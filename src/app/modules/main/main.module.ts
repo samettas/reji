@@ -9,6 +9,7 @@ import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
 import { CommentComponent } from './components/comment/comment.component';
+import { ActorCardComponent } from './components/actor-card/actor-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CommentComponent } from './components/comment/comment.component';
     FooterComponent,
     HomePage,
     MoviesPage,
-    CommentComponent
+    CommentComponent,
+    ActorCardComponent
   ],
   imports: [
     CommonModule,
