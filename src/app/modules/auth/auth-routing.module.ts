@@ -7,6 +7,7 @@ import { ResetPasswordPage } from './pages/reset-password/reset-password.page';
 import { EditProfilePage } from './pages/edit-profile/edit-profile.page';
 import { MyCommentsPage } from './pages/my-comments/my-comments.page';
 import { UpdatePasswordPage } from './pages/update-password/update-password.page';
+import { VerifyEmailPage } from './pages/verify-email/verify-email.page';
 
 const routes: Routes = [
   {
@@ -15,10 +16,11 @@ const routes: Routes = [
     children: [
       { path: '', component: LoginPage },
       { path: 'register', component: RegisterPage },
-      { path: 'resetpassword', component: ResetPasswordPage },
+      { path: 'reset-password', component: ResetPasswordPage },
       { path: 'profile', component: EditProfilePage },
-      { path: 'mycomments', component: MyCommentsPage },
-      { path: 'updatepassword', component: UpdatePasswordPage },
+      { path: 'my-comments', component: MyCommentsPage },
+      { path: 'update-password', component: UpdatePasswordPage },
+      { path: 'verify-email', component: VerifyEmailPage },
     ],
   },
 ];

@@ -11,6 +11,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { EditProfilePage } from './pages/edit-profile/edit-profile.page';
 import { UpdatePasswordPage } from './pages/update-password/update-password.page';
 import { MyCommentsPage } from './pages/my-comments/my-comments.page';
+import { VerifyEmailPage } from './pages/verify-email/verify-email.page';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MyCommentsPage } from './pages/my-comments/my-comments.page';
     SidebarComponent,
     EditProfilePage,
     UpdatePasswordPage,
-    MyCommentsPage
+    MyCommentsPage,
+    VerifyEmailPage
   ],
   imports: [
     CommonModule,

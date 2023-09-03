@@ -5,22 +5,12 @@
   <div class="container-fluid">
     <a class="navbar-logo" href="#">
       <img
-        src="../../assets/images/2503508.png"
+        *ngFor="let item of HeaderItems.logo"
+        [src]="item.src"
         alt="logo"
         style="height: 50px; width: 50px"
       />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav navbar-list">
@@ -28,7 +18,7 @@
           <a class="nav-link" [href]="item.link">{{ item.label }}</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex d-none d-lg-block">
         <input
           class="form-control me-2 rounded-pill"
           type="search"
@@ -41,9 +31,22 @@
           <a class="nav-link" [href]="item.link">{{ item.label }}</a>
         </li>
       </ul>
+    </div>
+    <div>
       <a [href]="item.link" *ngFor="let item of HeaderItems.buttonItems">
         <button class="navbar-login">{{ item.label }}</button></a
       >
     </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
