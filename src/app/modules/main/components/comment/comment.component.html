@@ -1,3 +1,4 @@
+
 <div class="container  py-5">
   <div class="row">
     <div class="col-md-6 col-lg-6">
@@ -26,7 +27,7 @@
           
         </div>
       </div>
-      <div class="container-divider my-5 "></div>
+      <div class="container-cizgi my-5 "></div>
     </div>
     
   </div>
@@ -34,8 +35,8 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-6 col-lg-6">
+  <div class="row" *ngFor="let item of commentItems" >
+    <div class="col-md-6 col-lg-6" >
       <div class="card">
         <div class="card-body p-4">
           <h4 class="com mb-0 mb-4 pb-2">Önceki yorumlar</h4>
@@ -47,24 +48,16 @@
               style="color: #f5c519;   font-size: 60px"
             ></i>
             <div>
-                <h6 class="fw-bold mb-1">Nihat Zaman</h6>
-
-              <p class="mb-0">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it.
-              </p>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
               <div class="deneme">
                 <p class="mb-0">
-                  
-                  March 30, 2021
-                  <a href="#!" class="link-muted"
-                    ><i class="fas fa-heart ms-2"></i
-                  ></a>
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
                 </p>
               </div>
-              
             </div>
             
           </div>
@@ -79,21 +72,14 @@
               style="color: #f5c519;   font-size: 60px"
             ></i>
             <div>
-              <h6 class="fw-bold mb-1">Nihat Zaman</h6>
-
-              <p class="mb-0">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it.
-              </p>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
               <div class="deneme">
                 <p class="mb-0">
-                  
-                  March 30, 2021
-                  <a href="#!" class="link-muted"
-                    ><i class="fas fa-heart ms-2"></i
-                  ></a>
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
                 </p>
               </div>
             </div>
@@ -109,21 +95,14 @@
               style="color: #f5c519;   font-size: 60px"
             ></i>
             <div>
-              <h6 class="fw-bold mb-1">Nihat Zaman</h6>
-
-              <p class="mb-0">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it.
-              </p>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
               <div class="deneme">
                 <p class="mb-0">
-                  
-                  March 30, 2021
-                  <a href="#!" class="link-muted"
-                    ><i class="fas fa-heart ms-2"></i
-                  ></a>
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
                 </p>
               </div>
             </div>
@@ -139,21 +118,14 @@
               style="color: #f5c519;   font-size: 60px"
             ></i>
             <div>
-              <h6 class="fw-bold mb-1">Nihat Zaman</h6>
-              <div class="d-flex align-items-center mb-3"></div>
-              <p class="mb-0">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it.
-              </p>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
               <div class="deneme">
                 <p class="mb-0">
-                  
-                  March 30, 2021
-                  <a href="#!" class="link-muted"
-                    ><i class="fas fa-heart ms-2"></i
-                  ></a>
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
                 </p>
               </div>
             </div>
