@@ -8,6 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
+
+import { ContentPreviewComponent } from './components/content-preview/content-preview.component';
+
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { CommentComponent } from './components/comment/comment.component';
@@ -23,6 +26,7 @@ import { MinicarouselComponent } from './components/minicarousel/minicarousel.co
 
 
 
+
 @NgModule({
   declarations: [
     RootPage,
@@ -30,16 +34,17 @@ import { MinicarouselComponent } from './components/minicarousel/minicarousel.co
     FooterComponent,
     HomePage,
     MoviesPage,
+
+    ContentPreviewComponent,
+
     CommentComponent,
     CarouselComponent,
     ActorinfoComponent,
     MovieinfoComponent,
-
-
-  
     MoviepicturesComponent,
     SidebarComponent,
     MinicarouselComponent,
+
 
 
   ],
