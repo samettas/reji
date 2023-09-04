@@ -14,6 +14,7 @@ import { CommentComponent } from './components/comment/comment.component';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
+import { MovieinfoComponent } from './components/movieinfo/movieinfo.component';
 
 import { MoviepicturesComponent } from './components/moviepictures/moviepictures.component';
 
@@ -29,13 +30,17 @@ import { MinicarouselComponent } from './components/minicarousel/minicarousel.co
     FooterComponent,
     HomePage,
     MoviesPage,
-
     CommentComponent,
     CarouselComponent,
     ActorinfoComponent,
+    MovieinfoComponent,
+
+
+  
     MoviepicturesComponent,
     SidebarComponent,
     MinicarouselComponent,
+
 
   ],
   imports: [
