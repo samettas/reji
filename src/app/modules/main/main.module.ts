@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { CommentComponent } from './components/comment/comment.component';
 
@@ -24,6 +25,9 @@ import { MinicarouselComponent } from './components/minicarousel/minicarousel.co
     FooterComponent,
     HomePage,
     MoviesPage,
+
+    SidebarComponent
+
     CommentComponent,
     CarouselComponent,
 
