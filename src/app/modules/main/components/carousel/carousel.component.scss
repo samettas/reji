@@ -1,0 +1,27 @@
+.moviecategories > ul {
+  color: #272727;
+  list-style-type: none;
+  text-align: center;
+}
+ul > li > a {
+  text-decoration: none;
+  color: #f5c519;
+  font-weight: 500;
+}
+a.baslik {
+  font-size: 24px;
+}
+ul > li > a:hover {
+  color: gray;
+}
+.genel {
+  background-color: #323232;
+
+  border-top: 5px solid #484848;
+  border-bottom: 5px solid #484848;
+}
+@media screen and (max-width: 1000px) {
+  div.mobileHide {
+    display: none;
+  }
+}
