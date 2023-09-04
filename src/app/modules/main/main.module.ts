@@ -13,6 +13,7 @@ import { CommentComponent } from './components/comment/comment.component';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
+import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
 
 
 
@@ -25,7 +26,9 @@ import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
     MoviesPage,
     CommentComponent,
     CarouselComponent,
-    ActorinfoComponent
+
+    ActorinfoComponent,
+    MinicarouselComponent,
 
   ],
   imports: [
