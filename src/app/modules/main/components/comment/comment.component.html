@@ -1,0 +1,137 @@
+
+<div class="container  py-5">
+  <div class="row">
+    <div class="col-md-6 col-lg-6">
+      <div class="card">
+        <div class="card-body p-4">
+          <div class="d-flex flex-start w-100">
+            <i
+              class="fas fa-user rounded-circle shadow-1-strong me-3 "
+              style="color: #f5c519; font-size: 60px " 
+            ></i>
+            <div class="w-100">
+
+              <div class="form-outline">
+                <div class="form-outline">
+                    <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                    <label class="form-label" for="textAreaExample">Yorum yazınız</label>
+                </div>
+              </div>
+              <div class="btn1 mt-3">
+                <button type="button" class="btn">
+                  Yorum <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container-cizgi my-5 "></div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<div class="container">
+  <div class="row" *ngFor="let item of commentItems" >
+    <div class="col-md-6 col-lg-6" >
+      <div class="card">
+        <div class="card-body p-4">
+          <h4 class="com mb-0 mb-4 pb-2">Önceki yorumlar</h4>
+          
+
+          <div class="d-flex flex-start">
+            <i
+              class="fas fa-user rounded-circle shadow-1-strong me-3"
+              style="color: #f5c519;   font-size: 60px"
+            ></i>
+            <div>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
+              <div class="deneme">
+                <p class="mb-0">
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+
+        <div class="card-body p-4">
+          <div class="d-flex flex-start">
+            <i
+              class="fas fa-user rounded-circle shadow-1-strong me-3"
+              style="color: #f5c519;   font-size: 60px"
+            ></i>
+            <div>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
+              <div class="deneme">
+                <p class="mb-0">
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="card-body p-4">
+          <div class="d-flex flex-start">
+            <i
+              class="fas fa-user rounded-circle shadow-1-strong me-3"
+              style="color: #f5c519;   font-size: 60px"
+            ></i>
+            <div>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
+              <div class="deneme">
+                <p class="mb-0">
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="card-body p-4">
+          <div class="d-flex flex-start">
+            <i
+              class="fas fa-user rounded-circle shadow-1-strong me-3"
+              style="color: #f5c519;   font-size: 60px"
+            ></i>
+            <div>
+              <h6 class="fw-bold mb-1">{{ item.name }}</h6>
+              <p class="mb-0">{{ item.comment }}</p>
+              <div class="deneme">
+                <p class="mb-0">
+                  {{ item.date }}
+                  <a href="#!" class="link-muted">
+                    <i class="fas fa-heart ms-2"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

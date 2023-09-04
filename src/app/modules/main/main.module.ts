@@ -10,6 +10,13 @@ import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
+import { CommentComponent } from './components/comment/comment.component';
+
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
+import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +25,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FooterComponent,
     HomePage,
     MoviesPage,
+
     SidebarComponent
+
+    CommentComponent,
+    CarouselComponent,
+
+    ActorinfoComponent,
+    MinicarouselComponent,
+
   ],
   imports: [
     CommonModule,
