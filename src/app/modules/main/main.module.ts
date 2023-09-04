@@ -23,7 +23,7 @@ import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
     FooterComponent,
     HomePage,
     MoviesPage,
-    CommentComponent
+    CommentComponent,
     CarouselComponent,
     ActorinfoComponent
 
