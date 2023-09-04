@@ -12,7 +12,7 @@
             }
             .content{
             padding: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             display: flex;
             border: 1px solid #645E5E;
             border-radius: 5px;
@@ -81,9 +81,8 @@
             }
             .content{
             padding: 8px;
-            margin-bottom: 30px;
             display: flex;
-            border: 1px solid #645E5E;
+            border-bottom: 2px solid #000;
             border-radius: 5px;
             &:hover {
                 cursor: pointer;
@@ -107,7 +106,118 @@
             }
 
             .userComment {
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+        }
+    }
+    .smallScreen{
+        .movieContent {
+            background-color: #202020;
+            padding: 24px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            h1{
+                color: #F5C519;
+                font-size: 18px;
+            }
+            .content{
+            padding: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            border: 1px solid #645E5E;
+            border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            }
+            h1 {
+                font-size: 12px;
+                color: #D9D9D9;
+                margin: 0;
+            }
+            }
+            .movieImg {
+                img {
+                    height: 72px;
+                    width: 72px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            .movieText {
                 padding: 20px;
+                display: flex;
+                align-items: center;
+                .movieStars {
+                    img {
+                        width: 128px;
+                    }
+                }
+            }
+
+        }
+        .movieType{
+        background-color: #202020;
+        h1{
+            color: #F5C519;
+            font-size: 18px;    
+            padding-left: 12px; 
+        }
+        .type {
+            display: flex;
+            ul {
+                list-style: none;
+                padding-left: 12px;
+                li {
+                font-size: 12px;
+                color: #D9D9D9;
+                margin-bottom: 5px;
+                margin-right: 20px; 
+            }
+            }
+        
+            
+        }
+        }
+        .lastestComment {
+            background-color: #202020;
+            padding: 24px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            h1{
+                color: #F5C519;
+                font-size: 18px;
+            }
+            .content{
+            padding: 8px;
+            display: flex;
+            border-bottom: 2px solid #000;
+            border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            }
+            h1 {
+                font-size: 12px;
+                color: #D9D9D9;
+                margin: 0;
+            }
+            }
+            .userImg {
+                img {
+                    height: 72px;
+                    width: 72px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+            }
+
+            .userComment {
                 display: flex;
                 align-items: center;
                 position: relative;
