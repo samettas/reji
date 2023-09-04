@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div *ngFor="let movie of movies">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- <img src="{{ movieData.poster_url }}" alt="Movie Poster"> burda filmin resmin çekicem-->
+          <img src="assets/images/resim2.jpg" class="img" />
+        </div>
+        <div class="col-md-4 info">
+          <h2>{{ movie.title }}</h2>
+          <!--burda gelecek olan filmin adını tutucam-->
+          
+          <p>{{ movie.overview }}</p>
+          <!--burda gelecek verinin içeriğini tutucam -->
+          
+          <p>Release Date: {{ movie.release_date }}</p>
+          <!--burda filmin yayınlanma tarihi falan filan-->
+          <div class="like-button">
+            <a href="#">
+              <i class="fas fa-heart fa-lg" style="color: red"></i>
+            </a>
+          </div>
+          <div class="like-button">
+            <a href="#">
+              <i class="fas fa-angles-right fa-lg"></i>
+            </a>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2 class="info">DENEME</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
