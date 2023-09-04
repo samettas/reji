@@ -10,6 +10,7 @@ import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
+import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
     HomePage,
     MoviesPage,
     CarouselComponent,
-    ActorinfoComponent
+    ActorinfoComponent,
+    MinicarouselComponent,
   ],
   imports: [
     CommonModule,
