@@ -8,12 +8,17 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { SharedModule } from '../shared/shared.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { CommentComponent } from './components/comment/comment.component';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ActorinfoComponent } from './components/actorinfo/actorinfo.component';
+
 import { MoviepicturesComponent } from './components/moviepictures/moviepictures.component';
+
+import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
+
 
 
 
@@ -24,10 +29,13 @@ import { MoviepicturesComponent } from './components/moviepictures/moviepictures
     FooterComponent,
     HomePage,
     MoviesPage,
+
     CommentComponent,
     CarouselComponent,
     ActorinfoComponent,
-    MoviepicturesComponent
+    MoviepicturesComponent,
+    SidebarComponent,
+    MinicarouselComponent,
 
   ],
   imports: [
