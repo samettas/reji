@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   HeaderItems = {
+    logo: [{ src: '../../assets/images/2503508.png' }],
     navigationLeft: [
       { label: 'Filmler', link: '#' },
       { label: 'Vizyondaki Filmler', link: '#' },
