@@ -1,4 +1,4 @@
-<section class="vh-20 w-100 my-5">
+<section class="vh-20 w-100 my-5" *ngFor="let item of ActorItems.actor">
   <div class="container">
     <div class="card mb-3">
       <div class="card-header mb-5">
@@ -14,32 +14,30 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Margot Robbie</h5>
+            <h5 class="card-title">{{ item.Name }}</h5>
             <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              {{ item.description }}
             </p>
             <ul>
               <li>
                 Dogum:
-                <span>19.08.2000</span>
+                <span>{{ item.dogum }}</span>
               </li>
               <li>
                 Boy:
-                <span>19.08.2000</span>
+                <span>{{ item.boy }}</span>
               </li>
               <li>
                 Esi:
-                <span>19.08.2000</span>
+                <span>{{ item.esi }}</span>
               </li>
               <li>
                 Kardesleri:
-                <span>19.08.2000</span>
+                <span>{{ item.kardesleri }}</span>
               </li>
               <li>
                 Ebeveynleri:
-                <span>19.08.2000</span>
+                <span>{{ item.ebeveynleri }}</span>
               </li>
             </ul>
           </div>
