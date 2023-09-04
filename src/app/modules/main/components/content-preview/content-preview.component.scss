@@ -71,6 +71,7 @@
 
 @media (max-width: 576px) {
     .container-fluid{
+        padding: 32px;
         .contextButton{
             .title{
                 padding: 10px;
@@ -97,14 +98,18 @@
                     img{
                         width: 64px;
                     }
+                    svg{
+                        height: 16px;
+                        width: 16px;
+                    }
                 }
                 }
                 .movieImg{
-                    
                     img{
                         height: 72px;
                         width: 72px;
                     }
+                    
                 }
                 
             }
