@@ -71,6 +71,7 @@
 
 @media (max-width: 576px) {
     .container-fluid{
+        padding: 32px;
         .contextButton{
             .title{
                 padding: 10px;
@@ -94,8 +95,9 @@
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
-                    img{
-                        width: 64px;
+                    svg{
+                        height: 16px;
+                        width: 16px;
                     }
                 }
                 }
