@@ -23,6 +23,7 @@ import { MoviepicturesComponent } from './components/moviepictures/moviepictures
 
 import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
 import { ActorcardComponent } from './components/actorcard/actorcard.component';
+import { ContentcardComponent } from './components/contentcard/contentcard.component';
 
 
 
@@ -46,6 +47,7 @@ import { ActorcardComponent } from './components/actorcard/actorcard.component';
     SidebarComponent,
     MinicarouselComponent,
     ActorcardComponent,
+    ContentcardComponent,
 
 
 
