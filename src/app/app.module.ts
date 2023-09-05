@@ -10,6 +10,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
 import { GlobalService } from './services/global.service';
+import { CommentService } from './modules/main/services/comment.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,7 @@ import { GlobalService } from './services/global.service';
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [GlobalService],
+  providers: [GlobalService,CommentService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

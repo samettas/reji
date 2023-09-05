@@ -5,64 +5,64 @@
       <div class="col-1"></div>
       <div class="col-10">
       
-      <div class="card-header mb-5">
+      <div class="card-header mb-5 my-2">
         <button class="infobutton px-4 py-2">Oynadığı diğer diziler</button>
       </div>
       <div class="card-group px-3 py-2 mx-3 my-2">
-        <div class="row my-2 ">
+        <div class="row my-2 " *ngFor="let content of contentcard">
           <div class="card col-12 col-sm-4 col-lg-2 ">
-            <img src="assets/images/pusu.jpg" class="card-img" alt="..." />
+            <img src={{content.img}} class="card-img" alt="..." />
             <button class="play-icon" style="background-color: transparent;">
                 <i class="fas fa-play"></i> 
             </button>
             <div class="card-body">
-              <h5 class="card-title">Kurtalar Vadisi Pusu</h5>
+              <h5 class="card-title">{{content.name}}</h5>
             </div>
           </div>
           <div class="card col-12 col-sm-4 col-lg-2">
-            <img src="assets/images/pusu.jpg" class="card-img" alt="..." />
+            <img src={{content.img}} class="card-img" alt="..." />
             <div class="play-icon">
                 <i class="fas fa-play"></i> 
             </div>
     
             <div class="card-body">
-              <h5 class="card-title">Kurtalar Vadisi Pusu</h5>
+              <h5 class="card-title">{{content.name}}</h5>
             </div>
           </div>
           <div class="card col-12 col-sm-4 col-lg-2">
-            <img src="assets/images/pusu.jpg" class="card-img" alt="..." />
+            <img src={{content.img}} class="card-img" alt="..." />
             <div class="play-icon">
                 <i class="fas fa-play"></i> 
             </div>
             <div class="card-body">
-              <h5 class="card-title">Kurtalar Vadisi Pusu</h5>
+              <h5 class="card-title">{{content.name}}</h5>
             </div>
           </div>
           <div class="card col-12 col-sm-4 col-lg-2">
-            <img src="assets/images/pusu.jpg" class="card-img" alt="..." />
+            <img src={{content.img}} class="card-img" alt="..." />
             <div class="play-icon">
                 <i class="fas fa-play"></i> 
             </div>
             <div class="card-body">
-              <h5 class="card-title">Kurtalar Vadisi Pusu</h5>
+              <h5 class="card-title">{{content.name}}</h5>
             </div>
           </div>
           <div class="card col-12 col-sm-4 col-lg-2">
-            <img src="assets/images/pusu.jpg" class="card-img" alt="..." />
+            <img src={{content.img}} class="card-img" alt="..." />
             <div class="play-icon">
                 <i class="fas fa-play"></i> 
             </div>
             <div class="card-body">
-              <h5 class="card-title">Kurtalar Vadisi Pusu</h5>
+              <h5 class="card-title">{{content.name}}</h5>
             </div>
           </div>
           <div class="card col-12 col-sm-4 col-lg-2">
-            <img src="assets/images/pusu.jpg" class="card-img" alt="..." />
+            <img src={{content.img}} class="card-img" alt="..." />
             <div class="play-icon">
                 <i class="fas fa-play"></i> 
             </div>
             <div class="card-body">
-              <h5 class="card-title">Kurtalar Vadisi Pusu</h5>
+              <h5 class="card-title">{{content.name}}</h5>
             </div>
           </div>
         </div>
