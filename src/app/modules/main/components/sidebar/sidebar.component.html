@@ -1,54 +1,18 @@
 
 <div class="container-fluid">
-    <div class="row bigScreen d-none d-lg-flex col-3">
+    <div class="row bigScreen d-none d-lg-flex col-12">
         <div class="movieContent">
             <h1>En çok tıklananlar</h1>
-            <div class="content col-12">
+            <div *ngFor="let movie of movies" class="content col-12">
                 <div class="movieImg">
-                    <img src="../../../../../assets/images/shawshank-redemption.jpg" alt="movieImg">
+                    <img [src]="movie.imageUrl" alt="movieImg">
                 </div>
                 <div class="movieText">
-                    <h1>Shawshank Redemption</h1>
+                    <h1>{{movie.name}}</h1>
                 </div>
     
             </div>
-            <div class="content col-12">
-                <div class="movieImg">
-                    <img src="../../../../../assets/images/shawshank-redemption.jpg" alt="movieImg">
-                </div>
-                <div class="movieText">
-                    <h1>Shawshank Redemption</h1>
-                </div>
-    
-            </div>
-            <div class="content col-12">
-                <div class="movieImg">
-                    <img src="../../../../../assets/images/shawshank-redemption.jpg" alt="movieImg">
-                </div>
-                <div class="movieText">
-                    <h1>Shawshank Redemption</h1>
-                </div>
-    
-            </div>
-            <div class="content col-12">
-                <div class="movieImg">
-                    <img src="../../../../../assets/images/shawshank-redemption.jpg" alt="movieImg">
-                </div>
-                <div class="movieText">
-                    <h1>Shawshank Redemption</h1>
-                </div>
-    
-            </div>
-    
-            <div class="content col-12">
-                <div class="movieImg">
-                    <img src="../../../../../assets/images/shawshank-redemption.jpg" alt="movieImg">
-                </div>
-                <div class="movieText">
-                    <h1>Shawshank Redemption</h1>
-                </div>
-    
-            </div>
+
 
         </div>
 
@@ -93,51 +57,15 @@
 
         <div class="lastestComment">
             <h1>Son Yorumlar</h1>
-            <div class="content col-12">
+            <div *ngFor="let comment of comments" class="content col-12">
                 <div class="userImg">
-                    <img src="../../../../../assets/images/profile.png" alt="userImg">
+                    <img [src]="comment.imageUrl" alt="userImg">
                 </div>
                 <div class="userComment">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </h1>
+                    <h1>{{comment.comment}}</h1>
                 </div>
             </div>
-            <div class="content col-12">
-                <div class="userImg">
-                    <img src="../../../../../assets/images/profile.png" alt="userImg">
-                </div>
-                <div class="userComment">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </h1>
-                </div>
-            </div>
-            <div class="content col-12">
-                <div class="userImg">
-                    <img src="../../../../../assets/images/profile.png" alt="userImg">
-                </div>
-                <div class="userComment">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </h1>
-                </div>
-            </div>
-            <div class="content col-12">
-                <div class="userImg">
-                    <img src="../../../../../assets/images/profile.png" alt="userImg">
-                </div>
-                <div class="userComment">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </h1>
-                </div>
-            </div>
-            <div class="content col-12">
-                <div class="userImg">
-                    <img src="../../../../../assets/images/profile.png" alt="userImg">
-                </div>
-                <div class="userComment">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </h1>
-                </div>
-            </div>
+
             
 
 
