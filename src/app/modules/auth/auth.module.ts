@@ -12,9 +12,12 @@ import { EditProfilePage } from './pages/edit-profile/edit-profile.page';
 import { UpdatePasswordPage } from './pages/update-password/update-password.page';
 import { MyCommentsPage } from './pages/my-comments/my-comments.page';
 import { VerifyEmailPage } from './pages/verify-email/verify-email.page';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth-guard.service';
 
 @NgModule({
+  providers: [AuthService, AuthGuard],
   declarations: [
     RootPage,
     LoginPage,
@@ -25,11 +28,8 @@ import { VerifyEmailPage } from './pages/verify-email/verify-email.page';
     EditProfilePage,
     UpdatePasswordPage,
     MyCommentsPage,
-    VerifyEmailPage
+    VerifyEmailPage,
   ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule
-  ]
+  imports: [FormsModule, CommonModule, AuthRoutingModule, ReactiveFormsModule],
 })
-export class AuthModule { }
+export class AuthModule {}
