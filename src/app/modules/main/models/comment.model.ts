@@ -1,9 +1,8 @@
 
-export class Comment {
-    name?: string;
+export class CommentModel {
+  
     comment?: string;
-    date?: string;
-    newCommentText?: string = ''; 
-    newCommentAuthor?: string = ''; 
+    commentDate?:string;
+    scor?:number;
   }
   

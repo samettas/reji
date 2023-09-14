@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { CommentService } from '../../services/comment.service';
+import { CommentModel } from '../../models/comment.model';
 
 
 @Component({
@@ -8,14 +9,31 @@ import { CommentService } from '../../services/comment.service';
   styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent implements OnInit{
-  comments: any[] = [];
-
+  comments: CommentModel|any;
+  
   
   constructor(private commentService: CommentService) {}
 
   ngOnInit(): void {
-    this.comments=this.commentService.getComments();
+    this.commentService.listComments('MBKYOM32RtFN7fCUE3j2').subscribe({
+      next: (res) => {
+        this.comments = res.map(r => r.data()); 
+        console.log(this.comments)
+      },
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {},
+    });
   }
+  
+  // save(value:any): any {
+  //   if (this.comments) {
+  //     this.commentService.addComment(this.comments)
+  //     console.log(this.comments)
+  //   }
+    
+  // }
   
   // async add(name: string) {
   //   name = name.trim();
