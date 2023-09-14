@@ -5,12 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth, Auth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
 import { GlobalService } from './services/global.service';
+
 import { CommentService } from './modules/main/services/comment.service';
+
+import { AuthService } from './modules/auth/services/auth.service';
+import { AuthGuard } from './modules/auth/services/auth-guard.service';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +28,10 @@ import { CommentService } from './modules/main/services/comment.service';
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [GlobalService,CommentService],
+
+
+  providers: [GlobalService, AuthService, AuthGuard,CommentService],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

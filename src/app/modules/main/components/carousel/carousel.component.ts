@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CarouselModel } from '../../models/carousel.model';
+import { CarouselService } from '../../services/carousel.service';
 
 @Component({
   selector: 'main-carousel',
@@ -6,55 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent {
-  carouselItems = {
-    images: [
-      {
-        src: 'https://i.hbrcdn.com/haber/2023/07/16/oppenheimer-filmi-konusu-nedir-oppenheimer-filmi-16121915_4358_amp.jpg',
-      },
-      {
-        src: 'https://i.hbrcdn.com/haber/2023/07/16/oppenheimer-filmi-konusu-nedir-oppenheimer-filmi-16121915_4358_amp.jpg',
-      },
-      {
-        src: 'https://i.hbrcdn.com/haber/2023/07/16/oppenheimer-filmi-konusu-nedir-oppenheimer-filmi-16121915_4358_amp.jpg',
-      },
-      {
-        src: 'https://i.hbrcdn.com/haber/2023/07/16/oppenheimer-filmi-konusu-nedir-oppenheimer-filmi-16121915_4358_amp.jpg',
-      },
-      {
-        src: 'https://i.hbrcdn.com/haber/2023/07/16/oppenheimer-filmi-konusu-nedir-oppenheimer-filmi-16121915_4358_amp.jpg',
-      },
-    ],
-    serieslist: [
-      { label: 'Aksiyon', link: '#' },
-      { label: 'Komedi', link: '#' },
-      { label: 'Drama', link: '#' },
-      { label: 'Bilim Kurgu', link: '#' },
-      { label: 'Korku', link: '#' },
-      { label: 'Romantik', link: '#' },
-      { label: 'Macera', link: '#' },
-      { label: 'Fantastik', link: '#' },
-      { label: 'Animasyon', link: '#' },
-      { label: 'Belgesel', link: '#' },
-      { label: 'Gerilim', link: '#' },
-      { label: 'Suc', link: '#' },
-      { label: 'Muzikal', link: '#' },
-      { label: 'Drama', link: '#' },
-    ],
-    movieslist: [
-      { label: 'Aksiyon', link: '#' },
-      { label: 'Komedi', link: '#' },
-      { label: 'Drama', link: '#' },
-      { label: 'Bilim Kurgu', link: '#' },
-      { label: 'Korku', link: '#' },
-      { label: 'Romantik', link: '#' },
-      { label: 'Macera', link: '#' },
-      { label: 'Fantastik', link: '#' },
-      { label: 'Animasyon', link: '#' },
-      { label: 'Belgesel', link: '#' },
-      { label: 'Gerilim', link: '#' },
-      { label: 'Suc', link: '#' },
-      { label: 'Muzikal', link: '#' },
-      { label: 'Drama', link: '#' },
-    ],
-  };
+  carouselItem: CarouselModel | any;
+
+  constructor(private carouselService: CarouselService) {}
+
+  ngOnInit(): void {
+    this.getCarousel();
+  }
+
+  async getCarousel() {
+    const headerData = await this.carouselService.getCarousel();
+    this.carouselItem = headerData;
+    console.log(this.carouselItem);
+  }
 }

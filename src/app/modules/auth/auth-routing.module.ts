@@ -9,6 +9,7 @@ import { MyCommentsPage } from './pages/my-comments/my-comments.page';
 import { UpdatePasswordPage } from './pages/update-password/update-password.page';
 import { VerifyEmailPage } from './pages/verify-email/verify-email.page';
 
+import { AuthGuard, redirectLoggedInTo } from '@angular/fire/auth-guard';
 const routes: Routes = [
   {
     path: '',
@@ -16,11 +17,27 @@ const routes: Routes = [
     children: [
       { path: '', component: LoginPage },
       { path: 'register', component: RegisterPage },
-      { path: 'reset-password', component: ResetPasswordPage },
-      { path: 'profile', component: EditProfilePage },
-      { path: 'my-comments', component: MyCommentsPage },
-      { path: 'update-password', component: UpdatePasswordPage },
-      { path: 'verify-email', component: VerifyEmailPage },
+      {
+        path: 'reset-password',
+        canActivate: [AuthGuard],
+        component: ResetPasswordPage,
+      },
+      { path: 'profile', canActivate: [AuthGuard], component: EditProfilePage },
+      {
+        path: 'mycomments',
+        canActivate: [AuthGuard],
+        component: MyCommentsPage,
+      },
+      {
+        path: 'updatepassword',
+        canActivate: [AuthGuard],
+        component: UpdatePasswordPage,
+      },
+      {
+        path: 'verify-email',
+
+        component: VerifyEmailPage,
+      },
     ],
   },
 ];

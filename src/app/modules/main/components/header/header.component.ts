@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HeaderModel } from '../../models/header.model';
+import { HeaderService } from '../../services/header.service';
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 
 @Component({
   selector: 'main-header',
@@ -6,18 +9,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  HeaderItems = {
-    logo: [{ src: '../../assets/images/2503508.png' }],
-    navigationLeft: [
-      { label: 'Filmler', link: '#' },
-      { label: 'Vizyondaki Filmler', link: '#' },
-      { label: 'Pek Yakında', link: '#' },
-    ],
-    navigationRight: [
-      { label: 'Diziler', link: '#' },
-      { label: 'TV Dizileri', link: '#' },
-      { label: 'Platform Dizileri', link: '#' },
-    ],
-    buttonItems: [{ label: 'Giriş Yap / Kayıt Ol', link: '/auth/' }],
-  };
+  headerItem: HeaderModel | any;
+
+  constructor(private headerService: HeaderService, public auth: AuthService) {}
+
+  ngOnInit(): void {
+    this.getHeader();
+  }
+
+  async getHeader() {
+    const headerData = await this.headerService.getHeader();
+    this.headerItem = headerData;
+    console.log(this.headerItem);
+  }
 }
