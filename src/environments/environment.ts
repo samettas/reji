@@ -7,4 +7,5 @@ export const environment = {
     apiKey: 'AIzaSyC5bC2ppxlOkP-eaAM14QRsDqHsDAZtNiM',
     authDomain: 'reji-e0a52.firebaseapp.com',
     messagingSenderId: '1025385046750',
-  },};
+  },
+};
