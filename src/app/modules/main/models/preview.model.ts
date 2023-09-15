@@ -1,8 +1,8 @@
 export class Preview{
-    name?:string;
-    year?:number;
+    movieID?:string;
+    movieName?:string;
+    releaseDate?:string;
     duration?:string;
     score?:number;
-    imageUrl?:string;
-    //starUrl?:string;
+    images?:string[];
 }
