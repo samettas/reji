@@ -1,7 +1,7 @@
 <section
   class="vh-100"
   style="
-    background-image: url(../../assets/images/user-background.jpeg);
+    background-image: url(../../../../../assets/images/user-background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
   "
@@ -16,7 +16,7 @@
               style="padding-top: 50px; padding-left: 50px; padding-right: 75px"
             >
               <div class="card-body p-4 p-lg-5 text-black">
-                <form>
+                <form [formGroup]="Form" (ngSubmit)="onSubmit()">
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <img
                       src="../../assets/images/2503508.png"
@@ -34,8 +34,9 @@
                     <input
                       type="text"
                       id="username"
-                      name="username"
                       class="form-control form-control-lg"
+                      name="Name"
+                      formControlName="Name"
                       required
                     />
                   </div>
@@ -48,6 +49,9 @@
                       type="email"
                       id="form2Example17"
                       class="form-control form-control-lg"
+                      #email
+                      name="email"
+                      formControlName="email"
                       required
                     />
                   </div>
@@ -59,25 +63,14 @@
                       id="password"
                       class="form-control form-control-lg"
                       required
-                    />
-                  </div>
-
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example27"
-                      >Telefon Numarasi</label
-                    >
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      class="form-control form-control-lg"
-                      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                      required
+                      name="password"
+                      formControlName="password"
+                      #pwd
                     />
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">
                       Kayit ol
                     </button>
                   </div>

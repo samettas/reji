@@ -4,7 +4,7 @@
       <div class="col-lg-3 mobileHide col-sm-none my-auto moviecategories">
         <ul>
           <li><a class="baslik fw-bold" href="#">Filmler</a></li>
-          <li *ngFor="let item of carouselItems.serieslist">
+          <li *ngFor="let item of carouselItem.movies">
             <a [href]="item.link">{{ item.label }}</a>
           </li>
         </ul>
@@ -17,11 +17,11 @@
         <div class="carousel-inner">
           <div
             class="carousel-item active"
-            *ngFor="let item of carouselItems.images"
+            *ngFor="let item of carouselItem.image"
           >
             <img [src]="item.src" class="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item" *ngFor="let item of carouselItems.images">
+          <div class="carousel-item" *ngFor="let item of carouselItem.image">
             <img [src]="item.src" class="d-block w-100" alt="..." />
           </div>
         </div>
@@ -51,7 +51,7 @@
               >Diziler</a
             >
           </li>
-          <li *ngFor="let item of carouselItems.serieslist">
+          <li *ngFor="let item of carouselItem.series">
             <a [href]="item.link">{{ item.label }}</a>
           </li>
         </ul>
