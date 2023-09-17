@@ -13,19 +13,35 @@
       }
     }
     .card-group {
-      padding: 20px;
-      margin: 10px;
+      
       border-radius: 20px;
       box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
       .card {
        padding: 10px;
         border: none;
         .card-img {
-          object-fit: cover;
+          
           
           max-width: 100%;
-          height: 100px;
+          height: 300px;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
           
+          position: relative;
+        }
+        .card-img:hover {
+          object-fit: contain;
+          transform: scale(3.2);
+          z-index: 1;
+          max-width: 100%;
+          height: 300px;
+          
+        }
+        
+        .card-img:click {
+          display: block;
+          width: 100%;
+          height: 300%;
         }
       }
     }

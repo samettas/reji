@@ -24,6 +24,7 @@ import { MoviepicturesComponent } from './components/moviepictures/moviepictures
 import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
 import { ActorcardComponent } from './components/actorcard/actorcard.component';
 import { ContentcardComponent } from './components/contentcard/contentcard.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -36,23 +37,23 @@ import { ContentcardComponent } from './components/contentcard/contentcard.compo
     FooterComponent,
     HomePage,
     MoviesPage,
-
     ContentPreviewComponent,
-
     CommentComponent,
     CarouselComponent,
     ActorinfoComponent,
-    MovieinfoComponent,
     MoviepicturesComponent,
+    MovieinfoComponent,
     SidebarComponent,
     MinicarouselComponent,
     ActorcardComponent,
     ContentcardComponent,
+    
 
 
 
   ],
   imports: [
+    FormsModule,
     CommonModule,
     MainRoutingModule,
     SharedModule
