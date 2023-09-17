@@ -1,8 +1,8 @@
 
-<div class="container-fluid">
+<div class="container-fluid" *ngFor="let infofo of footerr">
     <footer class="text-center text-lg-start ">
         <div class="text-center p-3 d-flex justify-content-between align-items-center">
-            <img src="assets/images/2503508.png" alt="Logo" class="logo">
+            <img src={{infofo.logo}} alt="Logo" class="logo">
 
             <div class="pt-4">
                 <section class="mb-4">
@@ -26,16 +26,16 @@
 
                     <ul class="list-unstyled mb-4">
                         <li>
-                            <a href="#!" class="text-white">Top 100</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">En iyi Filmler</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Vizyondaki Filmler</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Pek yakında</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                     </ul>
                 </div>
@@ -45,16 +45,16 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="text-white">Top 100</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">En iyi Diziler</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">TV Dizileri</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Platform Dizileri</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
 
                     </ul>
@@ -65,13 +65,13 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="text-white">Terms and Conditions</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Privacy Policy</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Terms of Use</a>
+                            <a href="#!" class="text-white">{{infofo.info}}</a>
                         </li>
                     </ul>
                 </div>

@@ -1,20 +1,43 @@
+<div class="container vh-20 w-70 ms-0">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="card-header mb-5 my-4">
+        <button class="infobutton px-4 py-2">Film</button>
+      </div>
+      <div class="container">
+        <div>
+          <div class="radiuss">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let movie of movieItems?.thumbnail">
+                <img [src]="movie.src" class="img" href="#" />
+              </div>
 
-<div class="container">
-    <div *ngFor="let movie of movies">
-      <div class="row">
-        <div class="col-md-4">
-          <!-- <img src="{{ movieData.poster_url }}" alt="Movie Poster"> burda filmin resmin çekicem-->
-          <img src="assets/images/resim2.jpg" class="img" />
-        </div>
-        <div class="col-md-4 info">
-          <h2>{{ movie.title }}</h2>
-          <!--burda gelecek olan filmin adını tutucam-->
-          
-          <p>{{ movie.overview }}</p>
-          <!--burda gelecek verinin içeriğini tutucam -->
-          
-          <p>Release Date: {{ movie.release_date }}</p>
-          <!--burda filmin yayınlanma tarihi falan filan-->
+              <div
+                class="col-md-4 info"
+                *ngFor="let movies of movieItems"
+              >
+                <h5 class="card-title">
+                  {{ movies.movieName }}</h5>
+                <p class="card-text">
+                  {{ movies.description }}
+                </p>
+                <ul>
+                  <li>
+                    Duration:
+                    <span>{{ movies.duration }}</span>
+                  </li>
+                  <li>
+                    releaseDate:
+                    <span>{{ movies.releaseDate }}</span>
+                  </li>
+                </ul>
+
+                
+              </div>
+            </div>
+            
+          </div>
           <div class="like-button">
             <a href="#">
               <i class="fas fa-heart fa-lg" style="color: red"></i>
@@ -25,14 +48,9 @@
               <i class="fas fa-angles-right fa-lg"></i>
             </a>
           </div>
-          
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h2 class="info">DENEME</h2>
-          </div>
         </div>
       </div>
     </div>
   </div>
-  
+  <div class="col-1"></div>
+</div>
