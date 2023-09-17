@@ -1,16 +1,23 @@
 import { Injectable, inject } from '@angular/core';
 import { CommentModel } from '../models/comment.model';
 import { Firestore, doc, getDoc, setDoc ,collection, query, where, limit, collectionSnapshots} from '@angular/fire/firestore';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
+  isError: boolean = false;
 
   
-
-  constructor() {}
-  private fs :Firestore=inject(Firestore);
+  
+  Form = this.fb.group({
+    commentt: new FormControl('', Validators.required),
+    
+  });
+  
+  constructor(private fs :Firestore=inject(Firestore),private fb: FormBuilder) {}
+  ;
 
   listComments(movieID:string, offset:number=0, step:number=6){
     
@@ -20,7 +27,14 @@ export class CommentService {
     return collectionSnapshots(actorsQuery);
 
 }
-
+    save() {
+      if (this.Form.valid)
+        this.fs.register(
+          this.Form.value.commentt as string,
+          
+        );
+      else this.isError = true;
+    }
 
   // addComment(comments: CommentModel) {
     
