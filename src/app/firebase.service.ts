@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Firestore,collection,doc,getDoc, getDocs } from '@angular/fire/firestore';
-import { Preview } from './modules/main/models/preview.model';
+import { MoviesModel } from './modules/main/models/movies.model';
 
 
 @Injectable({
@@ -15,7 +15,7 @@ export class FirebaseService {
   async getMovie(id: string){
     const ref = doc(this.firestore,'/components/content-preview/movie/'+id);
     return await getDoc(ref)
-      .then(res=>{return res.data() as Preview})
+      .then(res=>{return res.data() as MoviesModel})
       .catch(err=>{return undefined})
       .finally(()=>{console.log("getmovie çalıştı.movie id:"+id)});
   }
@@ -25,10 +25,10 @@ export class FirebaseService {
       const ref = collection(this.firestore, '/movies');
       const querySnapshot = await getDocs(ref);
     
-      const movies: Preview[] = [];
+      const movies: MoviesModel[] = [];
     
       querySnapshot.forEach((doc) => {
-        const movieData = doc.data() as Preview;
+        const movieData = doc.data() as MoviesModel;
         movies.push(movieData);
       });
     
