@@ -27,14 +27,6 @@ export class CommentService {
     return collectionSnapshots(actorsQuery);
 
 }
-    save() {
-      if (this.Form.valid)
-        this.fs.register(
-          this.Form.value.commentt as string,
-          
-        );
-      else this.isError = true;
-    }
 
   // addComment(comments: CommentModel) {
     

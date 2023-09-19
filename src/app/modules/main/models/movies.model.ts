@@ -1,20 +1,21 @@
 export class MoviesModel {
 
-    actorsid?:ActorData[];
+    actorIDs?:ActorData[];
     description?:string;
     duration?: string;
-    image?:ImageData[];
+    images?:ImageData[];
     movieName?:string;
     releaseDate?:string;
-    thumbnail?:ThumbNail[];
+    thumbnail?:string;
     trailers?:string[];
+    score?:number;
+    movieID?:string;
+    
+
 }
 export class ImageData{
     src?:string;
 }
 export class ActorData{
     label?:string;
-}
-export class ThumbNail{
-    src?:string;
 }
