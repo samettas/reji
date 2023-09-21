@@ -13,9 +13,9 @@
             <!-- First Item -->
             <div class="carousel-item active">
                 <div class="row">
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/esaretin-bedeli.jpg" alt="Image 1" class="d-block w-100">
-                        <div class="image-caption">Esaretin Bedeli</div>
+                    <div class="customCol col-12 col-sm-6 col-md-3" *ngFor="let item of movieItem">
+                        <img class="d-block w-100 h-100" [src]="item.images[0]?.src" alt="Image 1">
+                        <!-- <div class="image-caption"><h1>{{item.movieName}}</h1></div> -->
                     </div>
 
                 </div>
@@ -24,21 +24,9 @@
             <!-- Second Item -->
             <div class="carousel-item">
                 <div class="row">
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/barbie.webp" alt="Image 5" class="d-block w-100">
-                        <div class="image-caption">Barbie</div>
-                    </div>
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/esaretin-bedeli.jpg" alt="Image 6" class="d-block w-100">
-                        <div class="image-caption">Esaretin Bedeli</div>
-                    </div>
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/blue-bettle.jpg" alt="Image 7" class="d-block w-100">
-                        <div class="image-caption">Blue Bettle</div>
-                    </div>
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/forrestgump.jpg" alt="Image 8" class="d-block w-100">
-                        <div class="image-caption">Forrest Gump</div>
+                    <div class="customCol col-12 col-sm-6 col-md-3" *ngFor="let item of movieItem">
+                        <img class="d-block w-100 h-100" [src]="item.images[0]?.src" alt="Image 1">
+                        <!-- <div class="image-caption"><h1>{{item.movieName}}</h1></div> -->
                     </div>
                 </div>
             </div>
@@ -46,21 +34,9 @@
             <!-- Third Item -->
             <div class="carousel-item">
                 <div class="row">
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/barbie.webp" alt="Image 9" class="d-block w-100">
-                        <div class="image-caption">Barbie</div>
-                    </div>
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/blue-bettle.jpg" alt="Image 10" class="d-block w-100">
-                        <div class="image-caption">Blue Bettle</div>
-                    </div>
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/forrestgump.jpg" alt="Image 11" class="d-block w-100">
-                        <div class="image-caption">Forrest Gump</div>
-                    </div>
-                    <div class="customCol col-12 col-sm-6 col-md-3">
-                        <img src="../../../../../assets/images/esaretin-bedeli.jpg" alt="Image 12" class="d-block w-100">
-                        <div class="image-caption">Esaretin Bedeli</div>
+                    <div class="customCol col-12 col-sm-6 col-md-3" *ngFor="let item of movieItem">
+                        <img class="d-block w-100 h-100" [src]="item.images[0]?.src" alt="Image 1">
+                        <!-- <div class="image-caption"><h1>{{item.movieName}}</h1></div> -->
                     </div>
                 </div>
             </div>
@@ -77,5 +53,6 @@
             <span class="visually-hidden">Next</span>
         </a>
     </div>
+    
 </div>
 

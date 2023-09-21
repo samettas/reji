@@ -3,12 +3,12 @@
     <div class="row bigScreen d-none d-lg-flex col-12">
         <div class="movieContent">
             <h1>En çok tıklananlar</h1>
-            <div *ngFor="let movie of movies" class="content col-12">
+            <div class="content col-12" *ngFor="let item of movieItem">
                 <div class="movieImg">
-                    <img [src]="movie.imageUrl" alt="movieImg">
+                    <img [src]="item.images[0]?.src" alt="movieImg">
                 </div>
                 <div class="movieText">
-                    <h1>{{movie.name}}</h1>
+                    <h1>{{item.movieName}}</h1>
                 </div>
     
             </div>
@@ -57,7 +57,7 @@
 
         <div class="lastestComment">
             <h1>Son Yorumlar</h1>
-            <div *ngFor="let comment of comments" class="content col-12">
+            <div *ngFor="let comment of movieItem" class="content col-12">
                 <div class="userImg">
                     <img [src]="comment.imageUrl" alt="userImg">
                 </div>
