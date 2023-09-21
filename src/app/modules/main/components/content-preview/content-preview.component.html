@@ -8,9 +8,11 @@
     </div>
     <div class="row">
         <div  class="content col-12"*ngFor="let item of movieItem" >
+            <a href="/movies-detail/{{item.movieID}}">
             <div class="movieImg">
                 <img [src]="item.images[0]?.src" alt="movieImg">
             </div>
+            </a>
             <div class="movieText">
                 <h1>{{item.movieName}}</h1>
                 <h2>{{item.releaseDate}}</h2>

@@ -1,67 +1,71 @@
-
-<div class="container  py-5">
+<div class="container vh-20 w-70 ms-0">
   <div class="row">
-    <div class="col-md-6 col-lg-6">
-      <div class="card">
-        <div class="card-body p-4">
-          <div class="d-flex flex-start w-100">
-            <i
-              class="fas fa-user rounded-circle shadow-1-strong me-3 "
-              style="color: #f5c519; font-size: 60px " 
-            ></i>
-            <div class="w-100">
-
-                <div class="form-outline">
-                  <input name="comments" placeholder="commentsss" class="">
-                  
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card">
+              <div class="card-body p-4">
+                <div class="d-flex flex-start w-100">
+                  <i
+                    class="fas fa-user rounded-circle shadow-1-strong me-3"
+                    style="color: #f5c519; font-size: 60px"
+                  ></i>
+                  <div class="w-100">
+                    <div class="form-outline">
+                      <input
+                        name="comments"
+                        placeholder="commentsss"
+                        class=""
+                      />
+                    </div>
+                    <div class="btn1 mt-3">
+                      <button type="submit" class="btn">
+                        Yorum <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div class="btn1 mt-3">
-                  <button type="submit" class="btn">
-                    Yorum <i class="fas fa-long-arrow-alt-right ms-1"></i>
-                  </button>
-                </div>
-              
-              
-              
+              </div>
             </div>
+            <div class="container-cizgi my-5"></div>
           </div>
-          
         </div>
       </div>
-      <div class="container-cizgi my-5 "></div>
-    </div>
-    
-  </div>
-  
-</div>
+      <div class="container py-5" >
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="card">
+              <div class="card-body p-4">
+                <h4 class="com mb-0 mb-4 pb-2">Önceki yorumlar</h4>
 
-<div class="container">
-  <div class="row"  >
-    <div class="col-md-6 col-lg-6" >
-      <div class="card">  
-        <div class="card-body p-4">
-          <h4 class="com mb-0 mb-4 pb-2">Önceki yorumlar</h4>
-          
-
-          <div class="d-flex flex-start">
-            <i
-              class="fas fa-user rounded-circle shadow-1-strong me-3"
-              style="color: #f5c519;   font-size: 60px"
-            ></i>
-            <div *ngFor="let comment of comments">
-              <!-- <h6 class="fw-bold mb-1">{{ comment.name }}</h6> -->
-              <p class="mb-0">{{ comment.comment }}</p>
-              <div class="deneme">
-                <p class="mb-0">
-                  {{ comment.commentDate }}
-                  <a href="#!" class="link-muted">
-                    <i class="fas fa-heart ms-2"></i>
-                  </a>
-                </p>
+                <div class="d-flex flex-start" *ngFor="let comment of comments">
+                  <i
+                    class="fas fa-user rounded-circle shadow-1-strong me-3"
+                    style="color: #f5c519; font-size: 60px"
+                  ></i>
+                  <div>
+                    <h6 class="fw-bold mb-1">{{ comment.uID }}</h6>
+                    <p class="mb-0">
+                      {{ comment.comment }}
+                    </p>
+                    <div class="deneme">
+                      <p class="mb-0">
+                        {{ comment.commentDate }}
+                        <a href="#!" class="link-muted">
+                          <i class="fas fa-heart ms-2"></i>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
+      <div class="col-1"></div>
     </div>
   </div>
 </div>

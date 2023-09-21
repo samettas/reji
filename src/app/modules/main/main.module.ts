@@ -25,6 +25,8 @@ import { MinicarouselComponent } from './components/minicarousel/minicarousel.co
 import { ActorcardComponent } from './components/actorcard/actorcard.component';
 import { ContentcardComponent } from './components/contentcard/contentcard.component';
 import { FormsModule } from '@angular/forms';
+import { MoviesDetailPage } from './pages/movies-detail/movies-detail.page';
+import { ActorDetailPage } from './pages/actor-detail/actor-detail.page';
 
 
 
@@ -47,6 +49,8 @@ import { FormsModule } from '@angular/forms';
     MinicarouselComponent,
     ActorcardComponent,
     ContentcardComponent,
+    MoviesDetailPage,
+    ActorDetailPage,
     
 
 

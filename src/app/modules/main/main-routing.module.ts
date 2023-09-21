@@ -4,6 +4,8 @@ import { RootPage } from './pages/root/root.page';
 import { HomePage } from './pages/home/home.page';
 import { MoviesPage } from './pages/movies/movies.page';
 import { LoginPage } from '../auth/pages/login/login.page';
+import { MoviesDetailPage } from './pages/movies-detail/movies-detail.page';
+import { ActorDetailPage } from './pages/actor-detail/actor-detail.page';
 
 const routes: Routes = [
   {
@@ -18,6 +20,14 @@ const routes: Routes = [
         path: 'movies',
         component: MoviesPage,
       },
+      {
+        path: 'movies-detail/:id',
+        component: MoviesDetailPage,
+      },
+      {
+        path: 'actor-detail/:id',
+        component: ActorDetailPage,
+      }
     ],
   },
 ];

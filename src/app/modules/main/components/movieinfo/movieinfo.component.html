@@ -1,4 +1,4 @@
-<div class="container vh-20 w-70 ms-0">
+<div class="container vh-20 w-70 ms-0" *ngIf="movieItems">
   <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
@@ -9,45 +9,41 @@
         <div>
           <div class="radiuss">
             <div class="row">
-              <div class="col-md-4" *ngFor="let movie of movieItems?.thumbnail">
-                <img [src]="movie.src" class="img" href="#" />
+              <div class="col-md-4">
+                <img [src]="movieItems.thumbnail" class="img" href="#" />
               </div>
-
-              <div
-                class="col-md-4 info"
-                *ngFor="let movies of movieItems"
-              >
+              
+              <div class="col-md-4 info">
                 <h5 class="card-title">
-                  {{ movies.movieName }}</h5>
+                  {{ movieItems.movieName }}
+                </h5>
                 <p class="card-text">
-                  {{ movies.description }}
+                  {{ movieItems.description }}
                 </p>
                 <ul>
                   <li>
                     Duration:
-                    <span>{{ movies.duration }}</span>
+                    <span>{{ movieItems.duration }}</span>
                   </li>
+                  <br>
                   <li>
                     releaseDate:
-                    <span>{{ movies.releaseDate }}</span>
+                    <span>{{ movieItems.releaseDate }}</span>
                   </li>
                 </ul>
+              </div>
 
-                
+              <div class="col-md-4">
+                <div class="like-button">
+                  <a href="#">
+                    <i class="fas fa-heart fa-lg" style="color: red"></i>
+                  </a>
+                </div>
               </div>
             </div>
-            
           </div>
-          <div class="like-button">
-            <a href="#">
-              <i class="fas fa-heart fa-lg" style="color: red"></i>
-            </a>
-          </div>
-          <div class="like-button">
-            <a href="#">
-              <i class="fas fa-angles-right fa-lg"></i>
-            </a>
-          </div>
+          
+          
         </div>
       </div>
     </div>
