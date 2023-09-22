@@ -5,7 +5,5 @@ export class CommentModel {
     movieID?:string;
     score?:number;
     uID?:string;
-    
-    
   }
   
