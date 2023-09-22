@@ -9,10 +9,7 @@ import { UserService } from '../modules/auth/services/user.service';
 export class GlobalService {
 
   public authenticated: boolean = false;
-  constructor(private auth:Auth=inject(Auth)) {}
+  constructor() {}
 
-  getUser(){
-    const id =this.auth.currentUser?.uid
-    console.log('asdfasdfs')
-  }
+  
 }
