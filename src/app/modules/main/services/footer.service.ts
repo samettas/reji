@@ -1,16 +1,22 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Footer } from '../models/footer.model';
+import { Firestore, doc, getDoc } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FooterService {
-  private footer:Footer[]=[
-    {info:'TEST TEST TEST',logo:'../../assets/images/2503508.png'},
-  ]
-  constructor() { }
+  
+  constructor(private fs: Firestore = inject(Firestore)) {}
 
-  datafooter():Footer[]{
-    return this.footer;
+  async getFooter() {
+    const docRef = doc(this.fs, 'components', 'footer');
+    const docSnap = await getDoc(docRef);
+   
+    if (docSnap.exists()) {
+      return docSnap.data();
+    } else {
+      return console.log('No such document!');
+    }
   }
 }

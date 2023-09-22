@@ -24,7 +24,9 @@ import { MoviepicturesComponent } from './components/moviepictures/moviepictures
 import { MinicarouselComponent } from './components/minicarousel/minicarousel.component';
 import { ActorcardComponent } from './components/actorcard/actorcard.component';
 import { ContentcardComponent } from './components/contentcard/contentcard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MoviesDetailPage } from './pages/movies-detail/movies-detail.page';
+import { ActorDetailPage } from './pages/actor-detail/actor-detail.page';
 
 
 
@@ -47,6 +49,8 @@ import { FormsModule } from '@angular/forms';
     MinicarouselComponent,
     ActorcardComponent,
     ContentcardComponent,
+    MoviesDetailPage,
+    ActorDetailPage,
     
 
 
@@ -56,7 +60,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     CommonModule,
     MainRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }

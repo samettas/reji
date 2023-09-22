@@ -4,6 +4,7 @@ import { Actorcard } from '../../models/actorcard.model';
 import { MoviesModel } from '../../models/movies.model';
 import { MoviesService } from '../../services/movies.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'main-actorcard',
@@ -14,19 +15,21 @@ export class ActorcardComponent {
   
 
    
-   actors: Actorcard |any;
+   actors: Actorcard|any;
 
   constructor(
-    private actorsService: ActorcardService,
+    private actorsService: ActorcardService,private route :ActivatedRoute
     
   ) {}
  
   
   ngOnInit(): void {
-    this.actorsService.listActors('MBKYOM32RtFN7fCUE3j2').subscribe({
+    const id =this.route.snapshot.paramMap.get('id') as string
+
+    this.actorsService.listActors(id).subscribe({
       next: (res) => {
         this.actors = res.map(r => r.data()); // Veriyi actors değişkenine atar
-        console.log(this.actors[0].image);
+       console.log(this.actors)
       },
       error: (err) => {
         console.log(err);
@@ -35,30 +38,7 @@ export class ActorcardComponent {
     });
   }
   
-  // actorsSub.subscribe((actorRes)=>{
-      //   this.actors=actorRes.map((actor)=>actor.data());
-       
-      // })
-
-
-  // async getMovie(id: string) {
-  //   //return this.mService.getMovie(id).then(this.movieItems)
-  //   const movieData = await this.mService.getMovie(id);
-  //   this.movieItemss = movieData;
-    
-  // } 
-  // async getMoviewithactor(ids: string){
-  //   const moviesCollection = await this.mService.getMovie(ids);
-
-  //   const actorsCollection = await this.mService.getActor(ids);
-  //   const movie = await moviesCollection.doc('MBKYOM32RtFN7fCUE3j2').get();
-
-  //   const query = actorsCollection
-  //   .where('id', 'in', movie.data().actorsId);
-
-  //   const results = await query.get();
-  // }
-
+  
   
   
 }

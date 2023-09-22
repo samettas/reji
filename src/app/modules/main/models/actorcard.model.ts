@@ -1,9 +1,15 @@
 export class Actorcard {
-    name: string;
-    img: string;
-  
-    constructor(name: string, img: string) {
-      this.name = name;
-      this.img = img;
-    }
+  actorIDs?:string;
+  actorName?: string;
+  boyu?: string;
+  description?: string;
+  dogum?: string;
+  ebeveynleri?: string;
+  esi?: string;
+
+  image?: string;
+
+  kardesleri?: string;
+  moviesIDs?: string[];
+  seriesIDs?: Array<string[]>;
   }

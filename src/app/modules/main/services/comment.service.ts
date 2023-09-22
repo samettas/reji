@@ -1,56 +1,45 @@
 import { Injectable, inject } from '@angular/core';
-import { CommentModel } from '../models/comment.model';
-import { Firestore, doc, getDoc, setDoc ,collection, query, where, limit, collectionSnapshots} from '@angular/fire/firestore';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Auth } from '@angular/fire/auth';
+import {
+  Firestore,
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from '@angular/fire/firestore';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommentService {
-  isError: boolean = false;
 
-  
-  
-  Form = this.fb.group({
-    commentt: new FormControl('', Validators.required),
+  constructor(
+    private fs: Firestore = inject(Firestore),
+    private auth: Auth = inject(Auth)
+  ) {}
+
+  async listComments(id: string) {
+    const q = query(
+      collection(this.fs, 'comments'),
+      where('movieID', '==', id)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    return querySnapshot.docs.map((doc) => doc.data());
     
-  });
+  }
+  async createComment(comment: any) {
+    console.log(comment);
   
-  constructor(private fs :Firestore=inject(Firestore),private fb: FormBuilder) {}
-  ;
+    const docRef = await addDoc(collection(this.fs, "comments"), comment);
 
-  listComments(movieID:string, offset:number=0, step:number=6){
-    
-    const actorsReferance=collection(this.fs,'comments');
-    const actorsQuery=query(actorsReferance,where('movieID','array-contains',movieID),limit(step));
-
-    return collectionSnapshots(actorsQuery);
-
-}
-
-  // addComment(comments: CommentModel) {
-    
-  //   const commentsData = { ...comments }; // comment nesnesini bir kopya olarak alıyorz
-    
-  //   return setDoc(doc(this.fs, 'comments/' + comments.comment+comments.name ), commentsData);
-  
-  
-  //   }
-    // async addComment(id: string) {
-    //   const docRef = doc(this.fs, 'movies', id);
-    //   const docSnap = await getDoc(docRef);
-      
-      
-    //   if (docSnap.exists()) {
-    //     return docSnap.data();
-    //   } else {
-    //     return console.log('No such document!');
-    //   }
-    // }
-  // addComment(comment: Comment): void {
-  //   this.comments.push(comment);
-  // }
+    return docRef;
+  }
 
   
-
 }

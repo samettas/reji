@@ -1,28 +1,24 @@
-
- 
-  <section class="container vh-20 w-70 ms-0 " >
-    <div class="row" >
-      <div class="col-1"></div>
-      <div class="col-10">
+<section class="container vh-20 w-70 ms-0">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
       <div class="card-header mb-5">
-      <button class="infobutton px-4 py-2">Oyuncular</button>
-    </div>
-    <div class="card-group mb-3">
-      <div class="row">
-        <div class="card col-12 col-sm-4 col-lg-2 " *ngFor="let actor of actors">
-          <img [src]='actors[0].image' class="card-i" alt=".." />
-          
-          <div class="card-body">
-            <h5 class="card-title">{{actors[0].actorName}}</h5>
-          </div>  
+        <button class="infobutton px-4 py-2">Oyuncular</button>
+      </div>
+      <div class="card-group mb-3">
+        <div class="row">
+          <div
+            class="card col-12 col-sm-4 col-lg-2"
+            *ngFor="let actor of actors"
+          >
+            <a href="/actor-detail/{{actor.actorIDs}}"><img [src]="actor.image" class="card-img" alt=".." /> </a>
+            
+            <div class="card-body">
+              <h5 class="card-title">{{ actor.actorName }}</h5>
+            </div>
+          </div>
         </div>
-        
       </div>
     </div>
-      </div>
-      <div class="col-1"></div>
-
-    </div>
-    
-  </section>
- 
+  </div>
+</section>

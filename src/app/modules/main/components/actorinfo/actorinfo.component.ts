@@ -16,7 +16,8 @@ export class ActorinfoComponent {
     private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
-    this.getActor('cnNSKe2jX0IgN2TAYnos');
+    const id =this.route.snapshot.paramMap.get('id') as string
+    this.getActor(id);
   }
   async getActor(id: string) {
     const headerData = await this.actorService.getActor(id);
