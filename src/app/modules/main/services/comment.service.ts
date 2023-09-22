@@ -1,47 +1,45 @@
 import { Injectable, inject } from '@angular/core';
-import {  Firestore, collection, doc, getDoc, getDocs, query, where} from '@angular/fire/firestore';
-import { Observable, map } from 'rxjs';
-
-import { CommentModel } from '../models/comment.model';
+import { Auth } from '@angular/fire/auth';
+import {
+  Firestore,
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from '@angular/fire/firestore';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommentService {
-  
 
-  
+  constructor(
+    private fs: Firestore = inject(Firestore),
+    private auth: Auth = inject(Auth)
+  ) {}
 
-  constructor(private fs: Firestore = inject(Firestore)) {}
-
-  
-  
-
-  async listComments(id:string ){
-
-    const q = query(collection(this.fs, "comments"), where("movieID", "==", id));
+  async listComments(id: string) {
+    const q = query(
+      collection(this.fs, 'comments'),
+      where('movieID', '==', id)
+    );
 
     const querySnapshot = await getDocs(q);
-    
-    return querySnapshot.docs.map(doc=>doc.data());
-    querySnapshot.forEach((doc) => {
-      
-      console.log(doc.id, " => ", doc.data());
-  });
-  }
-  // addComment(hero: Hero) {
 
-  //   return setDoc(doc(this.fs, 'heroes/' + hero.id), heroData);
+    return querySnapshot.docs.map((doc) => doc.data());
+    
+  }
+  async createComment(comment: any) {
+    console.log(comment);
   
-  //   }
+    const docRef = await addDoc(collection(this.fs, "comments"), comment);
+
+    return docRef;
+  }
+
   
-  // addComment(commentText: string, movieID?: string): Observable<CommentModel> {
-  //   const data = {
-  //     comment: commentText,
-  //     movieID: movieID
-  //   };
-  //   return this.firestore
-  //     .collection('comments')
-  //     .add(data);
-  // }
 }

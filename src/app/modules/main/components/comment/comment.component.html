@@ -13,13 +13,16 @@
                     style="color: #f5c519; font-size: 60px"
                   ></i>
                   <div class="w-100">
-                    <label for="new-comment">Yorum giriniz :</label>
-                    <input id="new-comment" #commentName />
-                    <div class="btn1 mt-3">
-                      <!-- <button type="button" class="add-button"(click)="add(commentName.value); ">
-                        Yorum <i class="fas fa-long-arrow-alt-right ms-1"></i>
-                      </button> -->
-                    </div>
+                    <form [formGroup]="form" >
+                      <label for="new-comment">Yorum giriniz :</label>
+                      <input id="new-comment" formControlName="comment" />
+                      
+                      <div class="btn1 mt-3">
+                        <button type="button" class="add-button" (click)="submit()">
+                          Yorum <i class="fas fa-long-arrow-alt-right ms-1"></i>
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
