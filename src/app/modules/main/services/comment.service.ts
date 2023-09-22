@@ -1,12 +1,28 @@
 import { Injectable, inject } from '@angular/core';
+<<<<<<< HEAD
 import { CommentModel } from '../models/comment.model';
 import { Firestore, doc, getDoc, setDoc ,collection, query, where, limit, collectionSnapshots, getDocs} from '@angular/fire/firestore';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+=======
+import { Auth } from '@angular/fire/auth';
+import {
+  Firestore,
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from '@angular/fire/firestore';
+>>>>>>> 0d13017c6d0b0e516796492349ea12005ff6efc0
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommentService {
+<<<<<<< HEAD
   isError: boolean = false;
   async getComment() : Promise<CommentModel[]>{
     const querySnapshot = await getDocs(collection(this.fs, "comments"));
@@ -21,44 +37,32 @@ export class CommentService {
   
   Form = this.fb.group({
     commentt: new FormControl('', Validators.required),
+=======
+
+  constructor(
+    private fs: Firestore = inject(Firestore),
+    private auth: Auth = inject(Auth)
+  ) {}
+
+  async listComments(id: string) {
+    const q = query(
+      collection(this.fs, 'comments'),
+      where('movieID', '==', id)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    return querySnapshot.docs.map((doc) => doc.data());
+>>>>>>> 0d13017c6d0b0e516796492349ea12005ff6efc0
     
-  });
+  }
+  async createComment(comment: any) {
+    console.log(comment);
   
-  constructor(private fs :Firestore=inject(Firestore),private fb: FormBuilder) {}
-  ;
+    const docRef = await addDoc(collection(this.fs, "comments"), comment);
 
-  listComments(movieID:string, offset:number=0, step:number=6){
-    
-    const actorsReferance=collection(this.fs,'comments');
-    const actorsQuery=query(actorsReferance,where('movieID','array-contains',movieID),limit(step));
-
-    return collectionSnapshots(actorsQuery);
-
-}
-
-  // addComment(comments: CommentModel) {
-    
-  //   const commentsData = { ...comments }; // comment nesnesini bir kopya olarak alıyorz
-    
-  //   return setDoc(doc(this.fs, 'comments/' + comments.comment+comments.name ), commentsData);
-  
-  
-  //   }
-    // async addComment(id: string) {
-    //   const docRef = doc(this.fs, 'movies', id);
-    //   const docSnap = await getDoc(docRef);
-      
-      
-    //   if (docSnap.exists()) {
-    //     return docSnap.data();
-    //   } else {
-    //     return console.log('No such document!');
-    //   }
-    // }
-  // addComment(comment: Comment): void {
-  //   this.comments.push(comment);
-  // }
+    return docRef;
+  }
 
   
-
 }

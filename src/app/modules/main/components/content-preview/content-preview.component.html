@@ -1,5 +1,5 @@
 
-<div class="content-container">
+<div class="content-container py-5">
     <div class="contextButton">
         <div class="title">
             <h2>Vizyondaki Filmler</h2>
@@ -7,10 +7,13 @@
         </div>
     </div>
     <div class="row">
-        <div  class="content col-12" *ngFor="let item of movieItem" >
+        <div  class="content col-12"*ngFor="let item of movieItem" >
+         
+            <a href="/movies-detail/{{item.movieID}}">
             <div class="movieImg">
-                <img [src]="item.images[0]?.src" alt="movieImg">
+                <img [src]="item.images[0]?.src" >
             </div>
+            </a>
             <div class="movieText">
                 <h1>{{item.movieName}}</h1>
                 <h2>{{item.releaseDate}}</h2>
@@ -23,6 +26,7 @@
             </div>
 
         </div>
+    
 
     </div>
 </div>

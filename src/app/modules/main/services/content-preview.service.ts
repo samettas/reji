@@ -15,7 +15,7 @@ async getPreview(): Promise<MoviesModel[]> {
   const movieItems: MoviesModel[] = [];
   querySnapshot.forEach((doc) => {
     movieItems.push(doc.data() as MoviesModel);
-    console.log(doc.id, " => ", doc.data());
+    // console.log(doc.id, " => ", doc.data());
 
   });
   return movieItems;

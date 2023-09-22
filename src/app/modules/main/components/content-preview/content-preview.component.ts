@@ -22,7 +22,16 @@ export class ContentPreviewComponent {
   async getPreview() {
     try {
       this.movieItem = await this.previewService.getPreview();
-      console.log(this.movieItem);
+      // console.log(this.movieItem);
+    } catch (error) {
+      console.error('Error getting preview:', error);
+    }
+  }
+  async docID(id:string){
+    try {
+      this.movieItem = await this.previewService.getPreview();
+      id=this.movieItem.id;
+      console.log(id);
     } catch (error) {
       console.error('Error getting preview:', error);
     }
