@@ -11,7 +11,8 @@
             class="card col-12 col-sm-4 col-lg-2"
             *ngFor="let actor of actors"
           >
-            <img [src]="actor.image" class="card-img" alt=".." />
+            <a href="/actor-detail/{{actor.actorIDs}}"><img [src]="actor.image" class="card-img" alt=".." /> </a>
+            
             <div class="card-body">
               <h5 class="card-title">{{ actor.actorName }}</h5>
             </div>

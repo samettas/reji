@@ -8,12 +8,18 @@ import { Footer } from '../../models/footer.model';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  footerr:Footer[]=[];
+  
+  footerItem: Footer |any;
 
-  constructor(private footerservice:FooterService){}
+  constructor(private footerService: FooterService) {}
 
-  ngOnInit() {
-    this.footerr=this.footerservice.datafooter()
-    }
+  ngOnInit(): void {
+    this.getFooter();
+  }
 
+  async getFooter() {
+    const headerData = await this.footerService.getFooter();
+    this.footerItem = headerData;
+    console.log(this.footerItem);
+  }
 }

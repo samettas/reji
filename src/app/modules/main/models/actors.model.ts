@@ -1,4 +1,5 @@
 export class ActorModel {
+  actorIDs?:string;
   actorName?: string;
   boyu?: string;
   description?: string;

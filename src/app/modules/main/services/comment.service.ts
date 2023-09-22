@@ -29,7 +29,11 @@ export class CommentService {
       console.log(doc.id, " => ", doc.data());
   });
   }
+  // addComment(hero: Hero) {
 
+  //   return setDoc(doc(this.fs, 'heroes/' + hero.id), heroData);
+  
+  //   }
   
   // addComment(commentText: string, movieID?: string): Observable<CommentModel> {
   //   const data = {

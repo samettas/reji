@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { CommentService } from '../../services/comment.service';
 import { CommentModel } from '../../models/comment.model';
 import { ActivatedRoute } from '@angular/router';
+import { addDoc, collection } from '@angular/fire/firestore';
 
 
 @Component({
@@ -30,6 +31,29 @@ export class CommentComponent implements OnInit{
       console.error(error); 
     }
   }
+  
+  // async add(name: string) {
+
+  //   name = name.trim();
+    
+  //   if (!name) { return; }
+  
+  //   this.commentService.addComment({ name:name,id:Date.now() })
+  //     .then(hero => {
+  //       //this.heroes.push({name,id:Date.now()}); // Kahramanı heroes listesine ekleyin
+  //     })
+  //     .catch(error => {
+  //       console.error('Hata:', error); // Hata durumunda konsola hata mesajını yazdırın
+  //     });
+  // }
+  // async addComment(){
+    
+  //   const docRef = await addDoc(collection(this.commentService, "cities"), {
+  //   name: "Tokyo",
+  //   country: "Japan"
+  // });
+  // console.log("Document written with ID: ", docRef.id);}
+  
   
   
   

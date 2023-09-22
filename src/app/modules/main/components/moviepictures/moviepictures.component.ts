@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 import { MoviesModel } from '../../models/movies.model';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -14,12 +15,13 @@ export class MoviepicturesComponent implements OnInit {
 
 
   constructor(
-    private mService: MoviesService,
+    private mService: MoviesService,private route:ActivatedRoute
     
   ) {}
 
   ngOnInit(): void {
-    this.getMovie('MBKYOM32RtFN7fCUE3j2');
+    const id =this.route.snapshot.paramMap.get('id') as string
+    this.getMovie(id);
   }
   async getMovie(id: string) {
     //return this.mService.getMovie(id).then(this.movieItems)

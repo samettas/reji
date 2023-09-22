@@ -13,17 +13,12 @@
                     style="color: #f5c519; font-size: 60px"
                   ></i>
                   <div class="w-100">
-                    <div class="form-outline">
-                      <input
-                        name="comments"
-                        placeholder="commentsss"
-                        class=""
-                      />
-                    </div>
+                    <label for="new-comment">Yorum giriniz :</label>
+                    <input id="new-comment" #commentName />
                     <div class="btn1 mt-3">
-                      <button type="submit" class="btn">
+                      <!-- <button type="button" class="add-button"(click)="add(commentName.value); ">
                         Yorum <i class="fas fa-long-arrow-alt-right ms-1"></i>
-                      </button>
+                      </button> -->
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 export class Actorcard {
-  
+  actorIDs?:string;
   actorName?: string;
   boyu?: string;
   description?: string;
