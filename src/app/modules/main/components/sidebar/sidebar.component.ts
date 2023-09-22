@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { SidebarMovie,CommentItem } from '../../models/sidebar.model';
+import { Component, inject } from '@angular/core';
+import { CommentItem, SidebarModel } from '../../models/sidebar.model';
+import { Firestore } from 'firebase/firestore';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'main-sidebar',
@@ -7,21 +9,20 @@ import { SidebarMovie,CommentItem } from '../../models/sidebar.model';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent   {
-  constructor() {}
-  title="Sidebar Movie List"
-  movies: SidebarMovie[] = [
-    { name: "Shawshank Redemption", imageUrl:"../../../../../assets/images/shawshank-redemption.jpg"},
-    { name: "The Godfather", imageUrl:"../../../../../assets/images/TheGodfather.jpeg" },
-    { name: "The Dark Knight",  imageUrl:"../../../../../assets/images/TheDarkKnight.jpg" },
-    { name: "The Godfather Part II",  imageUrl:"../../../../../assets/images/TheGodfatherPartII.jpg" },
-    { name: "12 Angry Men", imageUrl:"../../../../../assets/images/12AngryMen.jpg" },
-  ]
-  comments: CommentItem[] = [
-    { comment: "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", imageUrl:"../../../../../assets/images/profile.png"},
-    { comment: "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", imageUrl:"../../../../../assets/images/profile.png"},
-    { comment: "3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", imageUrl:"../../../../../assets/images/profile.png"},
-    { comment: "4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", imageUrl:"../../../../../assets/images/profile.png"},
-    { comment: "5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", imageUrl:"../../../../../assets/images/profile.png"}
-  ]
-  
+  movieItem: SidebarModel | any;
+
+  constructor(private sidebarService : SidebarService) {}
+
+  ngOnInit(): void {
+    this.getSidebar();
+  }
+
+  async getSidebar() {
+    try {
+      this.movieItem = await this.sidebarService.getSidebar();
+      console.log(this.movieItem);
+    } catch (error) {
+      console.error('Error getting sidebar:', error);
+    }
+  }
 }

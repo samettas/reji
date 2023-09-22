@@ -9,6 +9,9 @@
     <div class="row">
         <div  class="content col-12"*ngFor="let item of movieItem" >
             <a href="/movies-detail/{{item.movieID}}">
+
+        <div  class="content col-12" *ngFor="let item of movieItem" >
+
             <div class="movieImg">
                 <img [src]="item.images[0]?.src" alt="movieImg">
             </div>
