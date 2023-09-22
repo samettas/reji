@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { CommentModel } from '../models/comment.model';
-import { Firestore, doc, getDoc, setDoc ,collection, query, where, limit, collectionSnapshots} from '@angular/fire/firestore';
+import { Firestore, doc, getDoc, setDoc ,collection, query, where, limit, collectionSnapshots, getDocs} from '@angular/fire/firestore';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Injectable({
@@ -8,7 +8,15 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class CommentService {
   isError: boolean = false;
-
+  async getComment() : Promise<CommentModel[]>{
+    const querySnapshot = await getDocs(collection(this.fs, "comments"));
+    const commentItem:CommentModel[] = [];
+    querySnapshot.forEach((doc) => {
+      commentItem.push(doc.data() as CommentModel);
+      console.log(doc.id, " => ", doc.data());
+    });
+    return commentItem;
+  }
   
   
   Form = this.fb.group({
