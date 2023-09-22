@@ -10,8 +10,6 @@ export class MoviesModel {
     trailers?:string[];
     score?:number;
     movieID?:string;
-    
-
 }
 export class ImageData{
     src?:string;

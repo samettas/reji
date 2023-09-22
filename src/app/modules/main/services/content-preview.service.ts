@@ -9,13 +9,7 @@ export class ContentPreviewService {
 
   constructor(private fs: Firestore = inject(Firestore)) { }
 
-//   async getPreview() {
-//     const querySnapshot = await getDocs(collection(this.fs, "movies"));
-//     querySnapshot.forEach((doc) => {
-//     console.log(doc.id, " => ", doc.data());
 
-// });
-//   }
 async getPreview(): Promise<MoviesModel[]> {
   const querySnapshot = await getDocs(collection(this.fs, "movies"));
   const movieItems: MoviesModel[] = [];
