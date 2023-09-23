@@ -17,10 +17,13 @@
       border-radius: 20px;
       box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
       .card {
+        width: 200px;
        padding: 10px;
         border: none;
         .card-img {
           
+          max-width: 200%;
+          height: 300px;
           
           
           transition: all 0.3s ease-in-out;
