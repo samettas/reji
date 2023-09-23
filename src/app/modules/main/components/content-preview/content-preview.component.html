@@ -1,0 +1,32 @@
+
+<div class="content-container ">
+    <div class="contextButton">
+        <div class="title">
+            <h2>Vizyondaki Filmler</h2>
+            <h2>➜</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div  class="content col-12"*ngFor="let item of movieItem" >
+         
+            <a href="/movies-detail/{{item.movieID}}">
+            <div class="movieImg">
+                <img [src]="item.images[0]?.src" >
+            </div>
+            </a>
+            <div class="movieText">
+                <h1>{{item.movieName}}</h1>
+                <h2>{{item.releaseDate}}</h2>
+                <h2>{{item.duration}}</h2>
+                <div class="movieStars">
+                    <i *ngFor="let star of generateEmptyArray(item.score || 0,true)" class="fa-solid fa-star"></i>
+                    <i *ngFor="let star of generateEmptyArray(item.score || 0,false)" class="fa-regular fa-star"></i>
+                    
+                </div>
+            </div>
+
+        </div>
+    
+
+    </div>
+</div>

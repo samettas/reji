@@ -1,0 +1,55 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600&display=swap");
+</style>
+<nav class="navbar navbar-expand-lg navbar-light" *ngIf="headerItem">
+  <div class="container-fluid">
+    <a class="navbar-logo" href="#">
+      <img
+        *ngFor="let item of headerItem?.logo"
+        [src]="item.src"
+        alt="logo"
+        style="height: 50px; width: 50px"
+      />
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav navbar-list">
+        <li class="nav-item" *ngFor="let item of headerItem?.navigationLeft">
+          <a class="nav-link" [href]="item.link">{{ item.label }}</a>
+        </li>
+      </ul>
+      <form class="d-flex d-none d-lg-block">
+        <input
+          class="form-control me-2 rounded-pill"
+          type="search"
+          placeholder=" Film veya dizi arayın"
+          aria-label="Search"
+        />
+      </form>
+      <ul class="navbar-nav navbar-list">
+        <li class="nav-item" *ngFor="let item of headerItem?.navigationRight">
+          <a class="nav-link" [href]="item.link">{{ item.label }}</a>
+        </li>
+      </ul>
+    </div>
+    <div *ngFor="let item of headerItem?.buttonItems">
+      <a [href]="item.link" *ngIf="!auth.isLoggedIn">
+        <button class="navbar-login">{{ item.label }}</button></a
+      >
+      <a href="/auth/profile" *ngIf="auth.isLoggedIn">
+        <button class="navbar-login">Profile</button></a
+      >
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>

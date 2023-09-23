@@ -1,0 +1,44 @@
+.link-muted {
+  color: #aaa;
+  font-size: 20px;
+}
+.link-muted:hover {
+  color: #ff0000;
+}
+
+.deneme {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+}
+.btn1{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.comment-button{
+  background-color: #f5c519;
+  color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+.comment-button:hover {
+  background-color: #323232; /* Hover rengi */
+}
+.cizgi{
+  display: flex;
+  justify-content: center;
+} 
+@media(max-width: 640px) {
+    .cizgi{
+      display: none;
+    }
+    .deneme{
+      display: none;
+    }
+}

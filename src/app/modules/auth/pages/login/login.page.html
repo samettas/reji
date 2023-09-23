@@ -1,0 +1,95 @@
+<section
+  class="vh-100"
+  style="
+    background-image: url(../../assets/images/user-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  "
+>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-11">
+        <div class="card" style="border-radius: 1rem">
+          <div class="row g-0">
+            <div
+              class="col-md-6 col-lg-6 d-flex align-items-center"
+              style="padding-top: 50px; padding-left: 50px; padding-right: 75px"
+            >
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <img
+                      src="../../assets/images/2503508.png"
+                      style="height: 40px; width: 40px"
+                    />
+                    <span class="h1 fw-bold mb-0">Reji</span>
+                  </div>
+                  <!-- alert -->
+                  <div
+                    *ngIf="isError"
+                    class="p-3 my-3 bg-red-100 text-red-900 rounded"
+                  >
+                    Email or Password is incorrect.
+                  </div>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                    Hesabınıza giriş yapın
+                  </h5>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      ngModel
+                      name="email"
+                      type="email"
+                      id="form2Example17"
+                      formControlName="email"
+                      class="form-control form-control-lg"
+                      required
+                    />
+                    <label class="form-label" for="form2Example17"
+                      >Email adresi</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      ngModel
+                      type="password"
+                      formControlName="password"
+                      id="form2Example27"
+                      class="form-control form-control-lg"
+                      required
+                      name="password"
+                    />
+                    <label class="form-label" for="form2Example27">Şifre</label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">
+                      Giriş yap
+                    </button>
+                  </div>
+
+                  <a class="small text-muted" href="/auth/reset-password"
+                    >Şifreni mi unuttun?</a
+                  >
+                  <p class="mb-5 pb-lg-2" style="color: #393f81">
+                    Henüz hesabın yok mu?
+                    <a href="/auth/register" style="color: #393f81">Kaydol</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 d-none d-md-block">
+              <img
+                src="../../assets/images/user-background.jpeg"
+                alt="login form"
+                class="img-fluid py-5 px-5 rounded-5"
+                style="border-radius: 50px; width: 800px; height: 650px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

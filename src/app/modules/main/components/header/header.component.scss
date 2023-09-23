@@ -1,0 +1,36 @@
+.navbar-logo {
+  margin-left: 50px;
+}
+.navbar-login {
+  margin-right: 50px;
+  background-color: #f5c519;
+  color: #323232;
+  border-radius: 50px;
+  font-family: "Inter", Courier, monospace;
+  font-size: 12px;
+  padding: 10px 10px 10px 10px;
+}
+.navbar-login:hover {
+  transform: scale(1.05);
+}
+.navbar-list {
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar {
+  background-color: #323232;
+}
+ul > li > a {
+  color: #f5c519;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+ul > li > a:hover {
+  color: #d4bc64;
+}
+input::placeholder {
+  font-family: "Inter", Courier, monospace;
+  font-size: 10px;
+  opacity: 0.5;
+  color: #1f1f1f;
+}

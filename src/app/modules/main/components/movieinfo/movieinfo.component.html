@@ -1,0 +1,52 @@
+<div class="container vh-20 w-70 ms-0" *ngIf="movieItems">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="card-header mb-5 my-4">
+        <button class="infobutton px-4 py-2">Film</button>
+      </div>
+      <div class="container">
+        <div>
+          <div class="radiuss">
+            <div class="row">
+              <div class="col-12 col-md-4 col-lg-4">
+                <img [src]="movieItems.thumbnail" class="img" href="#" />
+              </div>
+              
+              <div class="col-12 col-md-4 col-lg-4 info">
+                <h5 class="card-title">
+                  {{ movieItems.movieName }}
+                </h5>
+                <p class="card-text">
+                  {{ movieItems.description }}
+                </p>
+                <ul>
+                  <li>
+                    Duration:
+                    <span>{{ movieItems.duration }}</span>
+                  </li>
+                  <br>
+                  <li>
+                    releaseDate:
+                    <span>{{ movieItems.releaseDate }}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="like-button">
+                  <a href="#">
+                    <i class="fas fa-heart fa-lg" style="color: red"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-1"></div>
+</div>

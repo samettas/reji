@@ -1,0 +1,44 @@
+<div class="vh-20 w-100 my-5" *ngIf="actorItems">
+  <div class="container">
+    <div class="card mb-3">
+      <div class="card-header mb-5">
+        <button class="infobutton px-4 py-2">Oyuncu</button>
+      </div>
+      <div class="row no-gutters py-4">
+        <div class="col-md-4">
+          <img [src]="actorItems.image" class="card-img" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ actorItems.actorName }}</h5>
+            <p class="card-text">
+              {{ actorItems.description }}
+            </p>
+            <ul>
+              <li>
+                Dogum:
+                <span>{{ actorItems.dogum }}</span>
+              </li>
+              <li>
+                Boy:
+                <span>{{ actorItems.boy }}</span>
+              </li>
+              <li>
+                Esi:
+                <span>{{ actorItems.esi }}</span>
+              </li>
+              <li>
+                Kardesleri:
+                <span>{{ actorItems.kardesleri }}</span>
+              </li>
+              <li>
+                Ebeveynleri:
+                <span>{{ actorItems.ebeveynleri }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

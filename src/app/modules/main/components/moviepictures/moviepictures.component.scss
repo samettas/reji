@@ -1,0 +1,40 @@
+.container {
+  
+    padding: 10px;
+    font-family: "inter";
+  
+    
+    .card-header {
+      .infobutton {
+        background-color: #323232;
+        color: #f5c519;
+        border: none;
+        border-radius: 20px;
+      }
+    }
+    .card-group {
+      
+      border-radius: 20px;
+      box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+      .card {
+        width: 200px;
+       padding: 10px;
+        border: none;
+        .card-img {
+          
+          max-width: 200%;
+          height: 300px;
+          
+          
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          
+          position: relative;
+        }
+        
+        
+        
+      }
+    }
+  }
+  

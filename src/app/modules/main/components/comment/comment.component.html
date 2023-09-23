@@ -1,0 +1,84 @@
+<div class="container vh-20 w-70 ms-0">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="container py-5">
+        <div class="row">
+          <div class="card">
+          <div class=" col-12 col-md-6 col-lg-6">
+            
+              <div class="card-body">
+                <div class="d-flex flex-start ">
+                  <div class="icon">
+                  <i
+                    class="fas fa-user rounded-circle shadow-1-strong me-3 "
+                    style="color: #f5c519; font-size: 60px "
+                  ></i>
+                </div>
+                  <div class="formClas mt-3">
+                    <form [formGroup]="form" >
+                      <label for="new-comment">Yorum giriniz :</label>
+                     
+                      <textarea id="new-comment" formControlName="comment" rows="3" cols="100" class="form-control mt-3">
+                      
+                        </textarea>
+                      <div class="btn1 mt-3">
+                        
+                        <button class="comment-button" (click)="submit()">Yorum Yap</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="container-cizgi my-5"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="container py-5" >
+        <div class="row">
+
+            <div class="card">
+                
+                <h4 class="com mb-0 mb-4 pb-2 mt-3 mx-3">Önceki yorumlar</h4>
+                <div class="cards">
+                <div class=" my-5 mb-0 mb-4 pb-2 mt-3 mx-3" *ngFor="let comment of comments">
+                  
+                  
+                  
+                  <div class="veri mb-0" style="
+                  display: flex;
+                  align-items: center;
+                  ">
+                    <i
+                    class="fas fa-user rounded-circle shadow-1-strong me-3"
+                    style="color: #f5c519; font-size: 60px"
+                    
+                  ></i>
+                    {{ comment.comment }}
+                  </div>
+                  <div class="deneme">
+                      
+                    <p class="mb-0">
+                      @{{ comment.uID }}
+                      
+                      {{ comment.commentDate }}
+                      <a href="#!" class="link-muted">
+                        <i class="fas fa-heart ms-2"></i>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="cizgi">-------------------------------------------  
+                  </div>
+               
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  
+</div>
