@@ -57,12 +57,11 @@
 
         <div class="lastestComment">
             <h1>Son Yorumlar</h1>
-            <div *ngFor="let comment of movieItem" class="content col-12">
-                <div class="userImg">
-                    <img [src]="comment.imageUrl" alt="userImg">
-                </div>
+            <div *ngFor="let comment of commentItem" class="content col-12">
                 <div class="userComment">
-                    <h1>{{comment.comment}}</h1>
+                    <h1>Tarih : {{comment.commentDate}}</h1>
+                    <h1>Yorum : {{comment.comment}}</h1>
+                    <h1>Puan : {{comment.score}}</h1>
                 </div>
             </div>
 

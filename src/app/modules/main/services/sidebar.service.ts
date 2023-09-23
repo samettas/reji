@@ -2,6 +2,7 @@
 import { Firestore } from '@angular/fire/firestore';
 import { SidebarModel } from '../models/sidebar.model';
 import { collection, doc, getDocs } from 'firebase/firestore';
+import { CommentModel } from '../models/comment.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,5 @@ export class SidebarService {
     });
     return movieItems;
   }
+  
 }
